@@ -1,0 +1,1342 @@
+https://pythonprogramming.net/data-analysis-python-pandas-tutorial-introduction/
+Sumario
+1.  What you will need for this tutorial series:	4
+2.  Lección 2	9
+3.  Leccion 3. IO, In and out . Quandl	13
+3.1  Leer un fichero .csv	13
+3.2  Grabar en un fuchero .csv	14
+3.3  Establecer una columna como índice	14
+3.4  Cambiar el nombre de un encabezado	15
+3.5  Eliminar encabezados	15
+3.6  Poner encabezados	15
+3.7  Convertir a HTML	16
+3.8  Renombrar columnas	16
+4.  Lección 4.	17
+4.1  Recopilar datos de Quandl	18
+4.2  Leyendo HTML con Pandas	19
+4.3  Construir el ticker	20
+4.4  Combinar DataFrames. Cocatenating y appending	21
+4.5  Concatenación	22
+4.6  Append. Agregar	23
+5.  Leccion 6. Joint y Mergind DataFrames	25
+5.1 Fusión. Joint	25
+5.2  Anexión. Merging	25
+5.3 REP	27
+5.4 Script	27
+6. Proyectos/Actividades	27
+6.1 REP	27
+6.2 Script	27
+7. Web’s de interesanteFiltrado:	27
+7.1 REP	27
+7.2 Script	27
+8. Proyectos/Actividades	28
+8.1 REP	28
+8.2 Script	28
+9. Proyectos/Actividades	28
+9.1 REP	28
+9.2 Script	28
+10. Proyectos/Actividades	28
+10.1 REP	28
+10.2 Script	28
+11. Proyectos/Actividades	28
+11.1 REP	28
+11.2 Script	28
+12. Proyectos/Actividades	29
+12.1 REP	29
+12.2 Script	29
+13. Proyectos/Actividades	29
+13.1 REP	29
+13.2 Script	29
+14. Proyectos/Actividades	29
+14.1 REP	29
+14.2 Script	29
+15. Proyectos/Actividades	30
+15.1 REP	30
+15.2 Script	30
+16. Proyectos/Actividades	30
+16.1 REP	30
+16.2 Script	30
+17. Proyectos/Actividades	30
+17.1 REP	30
+17.2 Script	30
+18. Proyectos/Actividades	31
+18.1 REP	31
+18.2 Script	31
+19. Proyectos/Actividades	31
+19.1 REP	31
+19.2 Script	31
+20. Proyectos/Actividades	31
+20.1 REP	31
+20.2 Script	31
+21. Proyectos/Actividades	32
+21.1 REP	32
+21.2 Script	32
+22. Proyectos/Actividades	32
+22.1 REP	32
+22.2 Script	32
+23. Proyectos/Actividades	32
+23.1 REP	32
+23.2 Script	32
+24. Proyectos/Actividades	33
+24.1 REP	33
+24.2 Script	33
+24.3 Curso.	33
+1. Script	33
+
+
+
+
+
+
+
+
+1.   Tutorial de Pandas. Introducción 
+Install numpy, matplotlib, pandas, pandas-datareader, quandl, and sklearn 
+Need help installing packages with pip? see the pip install tutorial
+Qué está pasando a todos, bienvenidos a una serie de tutoriales de Análisis de Datos con Python y Pandas. Pandas es un módulo de Python, y Python es el lenguaje de programación que vamos a usar. El módulo Pandas es una biblioteca de análisis de datos de alto rendimiento, altamente eficiente y de alto nivel.
+
+En esencia, es muy parecido a operar una versión sin cabeza de una hoja de cálculo, como Excel. La mayoría de los conjuntos de datos con los que trabaja serán lo que se denominan DataFrames. Ya puede estar familiarizado con este término, se usa en otros idiomas, pero, de lo contrario, un DataFrame generalmente es como una hoja de cálculo. Columnas y filas, ¡eso es todo! Desde aquí, podemos utilizar Pandas para realizar operaciones en nuestros conjuntos de datos a velocidades de rayo.
+
+Pandas también es compatible con muchas de las otras bibliotecas de análisis de datos, como Scikit-Learn para aprendizaje automático, Matplotlib para gráficos, NumPy, ya que usa NumPy y más. Es increíblemente poderoso y valioso saber. Si eres de los que usan Excel, o las hojas de cálculo generales, para diversas tareas de cómputo, donde pueden tardar un minuto, o una hora, en ejecutarse, Pandas cambiará tu vida. Incluso he visto versiones de Machine learning como K-Means clustering hechas en Excel. Eso es realmente genial, pero mi Python va a hacer eso mucho más rápido, lo que también te permitirá ser un poco más estricto con los parámetros, tener conjuntos de datos más grandes y simplemente hacer más cosas.
+
+¿Otra buena noticia? Puede cargar y sacar fácilmente en formato xls o xlsx rápidamente, por lo que, incluso si su jefe quiere ver las cosas a la manera antigua, puede hacerlo. Pandas también es compatible con archivos de texto, csv, hdf, xml, html y más con su IO increíblemente potente.
+
+Si acaba de unirse a nosotros con Python, debería poder seguir sin dominar Python, y esto podría ser su introducción a Python en general. Lo más importante, si tiene alguna pregunta, ¡pregúnteles! Si busca respuestas para cada una de las áreas de confusión y hace esto para todo, eventualmente tendrá una imagen completa. La mayoría de sus preguntas también serán aptas para Google. No temas formular tus preguntas, no se reirá de ti, lo prometo. Todavía busco muchos de mis objetivos para ver si alguien tiene algún código de ejemplo haciendo lo que quiero hacer, así que no te sientas como un novato solo porque lo haces.
+
+Si aún no te he vendido en Pandas, el argumento del ascensor es: Análisis de datos rapidísimo en datos similares a hojas de cálculo, con un mecanismo de entrada / salida extremadamente robusto para manejar múltiples tipos de datos e incluso convertir a tipos de datos y desde ellos.
+
+Suponiendo que tienes Python instalado. A continuación, vaya a su terminal o cmd.exe y escriba: pip install pandas. ¿Recibió un "pip no es un comando reconocido" o algo similar? No hay problema, esto significa que pip no está en tu RUTA. Pip es un programa, pero tu máquina no solo sabe dónde está a menos que esté en tu RUTA. Puede buscar cómo agregar algo a su ruta si lo desea, pero siempre puede indicar explícitamente la ruta al programa que desea ejecutar. En Windows, por ejemplo, el pip de Python se encuentra en C: / Python34 / Scripts / pip. Python34 significa Python 3.4. Si tiene Python 3.6, entonces usaría Python36, y así sucesivamente.
+
+Por lo tanto, si los pandas de instalación de pip regulares no funcionan, entonces usted puede hacer C: / Python34 / Scripts / pip install pandas
+
+En ese sentido, otro punto importante de contención para las personas es el editor que eligen. El editor realmente no importa en el gran esquema de las cosas. Deberías probar varios editores e ir con el que más te convenga. Con lo que te sientas cómodo y seas productivo. Eso es lo que más importa al final. Algunos empleadores también lo forzarán a usar el editor X, Y o Z al final también, por lo que probablemente no dependa de las funciones del editor. Con eso, prefiero el IDLE simple, entonces eso es lo que voy a codificar. De nuevo, puedes codificar en Wing, emacs, Nano, Vim, PyCharm, IPython, lo que quieras. Para abrir IDLE, simplemente vaya a Inicio, busque IDLE, y elija eso. A partir de ahí, Archivo> Nuevo y auge tendrá un editor de texto con resaltado y algunas otras cosas pequeñas. Cubriremos algunas de estas cosas menores a medida que avanzamos.
+
+Ahora, con cualquier editor que esté usando, ábralo y escriba un código rápido para verificar un DataFrame.
+
+En general, un DataFrame es el más cercano a la estructura de datos de Dictionary Python. Si no está familiarizado con Dictionaries, hay un tutorial para eso. Voy a anotar cosas así en el video, así como a tener enlaces a ellas en la descripción y en las versiones basadas en texto de los tutoriales en PythonProgramming.net
+
+Primero, hagamos algunas importaciones simples: 
+import pandas as pd
+import datetime
+import pandas_datareader.data as web
+from pandas_datareader import data
+Aquí, importamos pandas como pd. Este es solo un estándar común utilizado al importar el módulo Pandas. A continuación, importamos datetime, que usaremos en un momento para decirle a Pandas algunas fechas en las que queremos extraer datos. Finalmente, importamos pandas.io.data como web, porque vamos a usar esto para extraer datos de internet. Siguiente: 
+#start = datetime.datetime(2010, 1, 1)    # DateTimeIndex
+#end = datetime.datetime.now()
+#start = pd.Timestamp("2016/1/1")   # DateTimeIndex
+#end = pd.Timestamp("2018/1/30") 
+start = "2016-01-01"      # necesita from pandas_datareader import data
+end = "2018-02-05"
+Las tres funcionan correctamente
+Aquí, creamos variables de inicio y final que son objetos de fecha y hora, extrayendo datos desde el 1 de enero de 2010 hasta hoy. Ahora, podemos crear un DataFrame como ese: 
+df = web.DataReader('MMM', 'yahoo', start, end)
+
+#df.reset_index(inplace=True)   # deshacer índice
+#df.set_index("Date", inplace=True)  # hacer índice la columna Date
+#df = df.drop("Symbol", axis=1)  # eliminar una etiqueta índice
+
+Para evitar un error que se manifiesta en spyder haremos:
+
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
+Tamnien se puede hacer:
+try:
+    display = value._summary()
+except AttributeError:
+    display = value.summary()
+Esto extrae datos de Exxon de la API de Yahoo (que hemos tenido que cambiar desde el video, ya que tanto Yahoo como Google han detenido sus API), almacenando los datos en nuestra variable de df. Nombrar su DataFrame no es necesario, pero de nuevo, es un estándar bastante popular para trabajar con pandas. Solo ayuda a las personas a identificar de inmediato el marco de trabajo sin necesidad de rastrear el código.
+
+Entonces, esto nos da un DataFrame, ¿cómo lo vemos? Bueno, puede simplemente imprimirlo, como: 
+             
+
+High
+Low
+Open
+Close
+Volume
+Adj Close
+Date
+
+
+
+
+
+
+2016-01-04
+148.320007
+145.399994
+148.050003
+146.820007
+3277200.0
+137.027283
+2016-01-05
+147.500000
+145.610001
+146.820007
+147.460007
+2688100.0
+137.624573
+2016-01-06
+145.759995
+143.419998
+145.589996
+144.490005
+2997100.0
+134.852661
+
+Para importar las cotizaciones de varios valores en un único DataFrame.
+
+# importar cotizaciones de varios valores
+tickers = ["IBE.MC", "R4.MC", "TRUEVALUEFI.BC", "F00000H5PN.BC"]
+# Obtener df de cada ticker en un único df, ordenado por ticker y por fechas 
+def get(tickers, start, end):
+    def data(ticker):
+        return web.DataReader(ticker, 'yahoo', start, end)
+    datas = map(data, tickers)       
+    return pd.concat(datas, keys=tickers, names=['Ticker','Date'])
+all_data = get(tickers, start, end)
+print (all_data[:5])
+Obtenemos el siguiente DataFrame
+                   
+ 
+ 
+High
+Low
+Open
+Close
+Volume
+Adj Close
+Ticker
+Date
+
+
+
+
+
+
+IBE.MC
+2016-01-04
+6.498
+6.373
+6.475
+6.414
+87677427.0
+5.535354
+
+2016-01-05
+6.509
+6.398
+6.450
+6.493
+39578563.0
+5.603532
+
+2016-01-06
+6.496
+6.400
+6.496
+6.461
+26216138.0
+5.575915
+
+<class 'pandas.core.frame.DataFrame'>
+DatetimeIndex: 2191 entries, 2010-01-04 to 2018-09-14
+Data columns (total 6 columns):
+High         2191 non-null float64
+Low          2191 non-null float64
+Open         2191 non-null float64
+Close        2191 non-null float64
+Volume       2191 non-null float64
+Adj Close    2191 non-null float64
+dtypes: float64(6)
+memory usage: 119.8 KB
+None
+
+2.  Pandas básico
+En este análisis de datos con el tutorial de Python y Pandas, vamos a aclarar algunos de los conceptos básicos de Pandas. Los datos antes de ser cargados en un Dataframe de Pandas pueden tomar múltiples formas, pero en general debe ser un conjunto de datos que se pueda formar en filas y columnas. Entonces tal vez un diccionario como este: 
+web_stats = {'Day':[1,2,3,4,5,6],
+             'Visitors':[43,34,65,56,29,76],
+             'Bounce Rate':[65,67,78,65,45,52]}
+Podemos convertir este diccionario en un DataFrame haciendo lo siguiente: 
+web_stats = {'Day':[1,2,3,4,5,6],
+             'Visitors':[43,34,65,56,29,76],
+             'Bounce Rate':[65,67,78,65,45,52]}
+
+df = pd.DataFrame(web_stats)
+
+
+Day
+Visitors
+Bounce Rate
+0
+1
+43
+65
+1
+2
+34
+67
+2
+3
+65
+78
+3
+4
+56
+65
+4
+5
+29
+45
+5
+6
+76
+52
+
+Aquí puede ver los números a la izquierda, 0,1,2,3,4,5 y así sucesivamente, como los números de línea. Estos números son en realidad su "índice". El índice de un DataFrame es con qué se relacionan los datos, ordenados por ... etc. En general, va a ser la variable que conecta todos los datos. En este caso, nunca definimos nada para este propósito, y para Pandas sería un desafío "saber" qué era esa variable. Por lo tanto, cuando no define un índice, Pandas solo hará uno para usted así. Si mirarmos el conjunto de datos en este momento, ¿ves una columna que conecte a los demás?
+
+¡La columna "Día" se ajusta a esa factura! En general, si tiene datos fechados, la fecha será el "índice", ya que así es como se relacionan todos los puntos de datos. Hay muchas maneras de identificar el índice, cambiar el índice, etc. Vamos a cubrir un par aquí. En primer lugar, en cualquier DataFrame existente, podemos establecer un nuevo índice como ese: 
+df.set_index('Day', inplace=True)
+
+
+Visitors
+Bounce Rate
+Day
+
+
+1
+43
+65
+2
+34
+67
+3
+65
+78
+4
+56
+65
+5
+29
+45
+6
+76
+52
+
+Ahora puede ver que esos números de línea han desaparecido, y también observar cómo "Día" es más bajo que los otros encabezados de columna, esto se hace para denotar el índice. Una cosa a tener en cuenta es el uso de inplace = True. Lo que esto hace es permitirnos modificar el DataFrame "en el lugar", lo que significa que realmente modificamos la variable en sí. Sin inplace = True, tendríamos que hacer algo como: 
+df = df.set_index('Day')
+
+También puede establecer múltiples índices, pero ese es un tema más avanzado para tal vez una fecha posterior. Puedes hacerlo fácilmente, pero el razonamiento es bastante específico.
+
+Una vez que tenga un índice razonable que sea un datetime o un número como el que tenemos, entonces funcionará como un eje X. Si las otras columnas también son datos numéricos, entonces se pueden representar fácilmente. Como lo hicimos antes, adelante y hazlo: 
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use('fivethirtyeight')
+Luego, en la parte inferior, puedes trazar. ¿Recuerdas antes cuando hicimos referencia a una columna específica? Quizás lo hayas notado, pero podemos hacer referencia a elementos específicos en un DataFrame como este: 
+print(df['Visitors'])
+
+Day
+1    43
+2    34
+……...
+También puede hacer referencia a partes del DataFrame como un objeto, siempre que no haya espacios, por lo que puede hacer algo como esto: 
+print(df.Visitors)
+
+Entonces podemos representar una sola columna como esta: 
+df.plot()
+plt.show()
+
+Observa cómo una leyenda se agrega automáticamente? Otra característica interesante que puede apreciar es que la leyenda también se mueve automáticamente fuera del camino de las líneas reales de la trama. Si eres nuevo en Python y Matplotlib, esto podría no ser muy importante para ti, pero esto no es algo normal.
+
+Finalmente, antes de irnos, también puede hacer referencia a varias columnas a la vez, como eso (solo tenemos 2 columnas, pero lo mismo funciona con todas las que añada): 
+print(df[['Visitors','Bounce Rate']])
+
+Así que esa es una lista de encabezados de columna, entre corchetes, entre corchetes del DataFrame. También puedes trazar esto también. 
+3.  IO, In and out . Quandl
+
+Bienvenido a la Parte 3 del Análisis de datos con Pandas y Python. En este tutorial, comenzaremos a discutir IO, o input / output, con Pandas, y comenzaremos con un caso de uso realista. Para obtener una amplia práctica, un sitio web muy útil es Quandl. Quandl contiene una plétora de fuentes de datos gratuitas y de pago. Lo que hace que esta ubicación sea excelente es que los datos generalmente se normalizan, todo está en un solo lugar, y extraer los datos es el mismo método. 
+Si está utilizando Python y accede a los datos de Quandl a través de su módulo simple, los datos se devuelven automáticamente a un DataFrame. A los efectos de este tutorial, vamos a descargar manualmente un archivo CSV en su lugar, con fines de aprendizaje, ya que no todas las fuentes de datos que encuentre tendrán un módulo bonito y ordenado para extraer los conjuntos de datos.
+
+Digamos que estamos interesados en tal vez comprar o vender una casa en Austin, Texas. El código postal es 77006. 
+Podríamos ir a los listados de viviendas locales y ver cuáles son los precios actuales, pero esto realmente no nos da ninguna información histórica real, así que intentemos obtener algunos datos al respecto. 
+Vamos a consultar el "índice de valor de la vivienda 77006" ("home value index 77006.", buscar en Q7uandl Zillow Real Estate Research ). Efectivamente, podemos ver un índice aquí. Hay un nivel superior, medio, inferior, tres dormitorios, etc. Digamos, claro, tenemos una casa de tres dormitorios. Vamos a verificarlo. Resulta que Quandl ya proporciona gráficos, pero tomemos el conjunto de datos de todos modos, hagamos nuestro propio gráfico y tal vez hagamos otro análisis. 
+https://www.quandl.com/data/ZILLOW/Z77006_SALES-Zillow-Home-Value-Index-Zip-Home-Sales-NSA-77006-TX
+Ve a descargar y elige CSV. Pandas es capaz de IO con datos de csv, excel data, hdf, sql, json, msgpack, html, gbq, stata, portapapeles y pickle, y la lista continúa creciendo. Consulte la documentación de IO Tools para la lista actual. Toma ese CSV y muévelo al directorio local (el directorio en el que estás trabajando actualmente / donde está este script .py).
+
+Comenzando con este código, cargar en un archivo CSV a un DataFrame puede ser tan simple como: 
+
+3.1  Leer un fichero .csv
+Descargamos los ficheros: ZILLOW-Z77006_ZRISFRR y  ZILLOW-Z77006_SALES  y lo leeemos.
+import pandas as pd
+
+df = pd.read_csv('ZILLOW-Z77006_ZRISFRR.csv')
+print(df.head())
+
+         Date   Value
+0  2018-07-31  2989.0
+1  2018-06-30  2977.0
+2  2018-05-31  2969.0
+3  2018-04-30  2963.0
+4  2018-03-31  2960.0
+Tenga en cuenta que no tenemos un índice decente nuevamente. Podemos arreglar eso como lo hicimos antes haciendo: 
+df.set_index('Date', inplace = True)
+3.2  Grabar en un fichero .csv
+Ahora, digamos que queremos enviar esto de vuelta a un archivo CSV, podemos hacer lo siguiente: 
+
+df = pd.read_csv('ZILLOW-Z77006_ZRISFRR.csv')
+df.set_index('Date', inplace = True)
+df.to_csv('newcsv2.csv')
+
+¿Recuerdas cómo graficamos varias columnas, pero no todas? Vea si puede adivinar cómo guardar columnas múltiples, pero no todas.
+
+Ahora, leamos ese nuevo CSV en: 
+df = pd.read_csv('newcsv2.csv')
+print(df.head())
+             Value
+Date              
+2018-07-31  2989.0
+2018-06-30  2977.0
+2018-05-31  2969.0
+2018-04-30  2963.0
+2018-03-31  2960.0
+3.3  Establecer una columna como índice
+¡Maldición, nuestro índice se ha ido otra vez! Esto se debe a que CSV no tiene ningún atributo de "índice", como lo hace nuestro DataFrame. Lo que podemos hacer es establecer el índice en la importación, en lugar de importar y luego configurar el índice. Soemthing como: 
+df = pd.read_csv('newcsv2.csv', index_col=0)
+print(df.head())
+Date              
+2018-07-31  2989.0
+2018-06-30  2977.0
+………………………..
+3.4  Cambiar el nombre de un encabezado
+Ahora, no sé ustedes, pero el nombre "valor" es bastante inútil. ¿Podemos cambiar esto? Claro, hay muchas formas de cambiar los nombres de las columnas, una forma es: 
+df.columns = ['House_Prices']
+print(df.head())
+            House_Prices
+Date                    
+2018-07-31        2989.0
+2018-06-30        2977.0
+………………………..
+A continuación, podemos intentar guardarlo en csv de esta manera: 
+df.to_csv('newcsv3.csv')
+3.5  Eliminar encabezados
+Si miras el CSV allí, deberías ver que tiene los encabezados. ¿Qué pasa si no quieres encabezados? ¡No hay problema! 
+df.to_csv('newcsv4.csv', header=False)
+3.6  Poner encabezados
+¿Qué pasa si el archivo no tiene encabezados? No hay problema 
+df = pd.read_csv('newcsv4.csv', names = ['Date','House_Price'], index_col=0)
+print(df.head())
+Estos fueron los conceptos básicos de IO y algunas de las opciones que tiene cuando se trata de entrada y salida.
+3.7  Convertir a HTML
+
+Una cosa interesante es el uso de pandas para la conversión. Por lo tanto, tal vez esté ingresando datos de un archivo CSV, pero realmente desea mostrar esos datos en HTML en su sitio web. Dado que HTML es uno de los tipos de datos, podemos exportarlo a HTML, así: 
+df.to_html('example.html')
+
+
+House_Prices
+Date
+
+2015-06-30
+502300
+2015-05-31
+501500
+
+Tenga en cuenta que a esta tabla se le asigna automáticamente la clase de "DataFrame". Esto significa que puede tener un CSS personalizado para manejar tablas específicas de cuadros de datos.
+
+Particularmente me gusta utilizar Pandas cuando tengo un volcado de datos SQL. Tiendo a verter los datos de la base de datos directamente en un DataFrame de Pandas, realizar las operaciones que quiero realizar, luego mostrar los datos en un gráfico, o de otra forma servir los datos de alguna manera.
+3.8  Renombrar columnas
+Finalmente, ¿qué pasa si realmente queremos renombrar solo una de las columnas? Anteriormente, se le mostró cómo nombrar todas las columnas, pero tal vez solo quiera cambiar una sin tener que escribir todas las demás. Suficientemente fácil: 
+df = pd.read_csv('newcsv4.csv', names = ['Date','House_Price'])
+print(df.head())
+
+df.rename(columns={'House_Price':'Prices'}, inplace=True)
+print(df.head())
+         Date  House_Price
+0  2018-07-31       2989.0
+1  2018-06-30       2977.0
+…………………………………………………………...
+         Date  Prices
+0  2018-07-31  2989.0
+1  2018-06-30  2977.0
+……………………………………………………….
+Así que aquí, primero importamos el archivo decapitado, dando los nombres de las columnas Date y House_Price. Entonces, decidimos que, en cambio, queremos llamar a Price de House. Entonces, usamos df.rename, especificando que queríamos cambiar el nombre de las columnas, luego, en forma de diccionario, la clave es el nombre original y el valor es el nuevo nombre. Finalmente usamos inplace = True para que el objeto original sea modificado. 
+4.  Construyendo conjuntos de datos. 
+En esta parte de la serie de tutoriales Análisis de datos con Python y Pandas, vamos a ampliar un poco las cosas. Consideremos que somos multimillonarios o multimillonarios, pero es más divertido ser multimillonarios, y estamos intentando diversificar nuestra cartera tanto como sea posible. Queremos tener todo tipo de clases de activos, así que tenemos acciones, bonos, tal vez una cuenta de mercado monetario, y ahora estamos buscando entrar en bienes raíces para ser sólidos. Todos ustedes han visto los comerciales ¿verdad? Usted compra un CD por $ 60, asiste a un seminario de $ 500, y está listo para comenzar a hacer sus inversiones de 6 cifras a la vez en propiedad, ¿verdad? 
+De acuerdo, tal vez no, pero definitivamente queremos investigar un poco y tener algún tipo de estrategia para comprar bienes raíces. Entonces, ¿qué rige los precios de los hogares? ?Tenemos que hacer una investigación para descubrir esto? En general, no, realmente no necesita hacer esa investifación, conocemos los factores.
+ Los factores de los precios de las viviendas se rigen por: la economía, las tasas de interés y la demografía. Estas son las tres principales influencias en general para el valor de bienes raíces. Ahora, por supuesto, si usted está comprando tierra,  otras cosas importan, si  no es muy plana, vamos a necesitar hacer algún trabajo en la tierra antes de que podamos realmente sentar las bases, cómo es el drenaje, etc. Si hay una casa, entonces tenemos incluso más factores, como el techo, ventanas, calefacción / aire acondicionado, pisos, cimientos, etc. Podemos comenzar a considerar estos factores más adelante, pero primero comenzaremos en el nivel macro. Verá cuán rápido se inflan nuestros conjuntos de datos aquí, y cómo se multiplican rápidamente 
+4.1  Recopilar datos de Quandl
+Entonces, nuestro primer paso es recopilar los datos. Quandl todavía representa un excelente lugar para comenzar, pero esta vez automaticemos el acaparamiento de datos. Primero vamos a obtener datos de vivienda para los 50 estados, pero luego intentaremos recopilar otros datos también. Definitivamente no queremos extraer manualmente estos datos. Primero, si aún no tiene una cuenta, necesita obtener una en Quandl. Esto le dará una clave API y solicitudes de API ilimitadas a los datos gratuitos, lo cual es increíble. 
+Una vez que cree una cuenta, diríjase a su cuenta / me, lo que sea que estén llamando en ese momento, y luego encuentre la sección marcada como clave de API. Ahí está la clave que necesitarás. A continuación, queremos tomar el módulo Quandl. Realmente no necesitamos el módulo para realizar solicitudes, pero es un módulo muy pequeño, y el tamaño vale la poca facilidad que nos brinda, por lo que también podría serlo. Abra su terminal / cmd.exe y pip install quandl (nuevamente, recuerde especificar la ruta completa a pip si no se reconoce pip).
+
+A continuación, estamos listos para retumbar, abrir un nuevo editor. Para comenzar: 
+API Key: 1KPAsT__H3CRmAJDn4Xk 
+import quandl
+# Not necessary, I just do this so I do not show my API key.
+df = quandl.get("FMAC/HPI_TX", authtoken="1KPAsT__H3CRmAJDn4Xk")
+print(df.head())
+
+                Value
+Date                 
+1975-01-31  32.602350
+1975-02-28  32.944116
+1975-03-31  33.542975
+1975-04-30  34.402826
+1975-05-31  34.649755
+Puedes simplemente almacenar una versión de texto sin formato de tu llave, si quieres, solo he ocultado la mía, ya que es un tutorial que estoy publicando. Esto es todo lo que tenemos que hacer para obtener el índice de precios de la vivienda para Texas. El ticker real que tomamos se puede encontrar en cualquier página, cada vez que llegue allí, simplemente haga clic en la biblioteca que está utilizando en el lateral, en nuestro caso, Python, y aparecerá la consulta que necesita escribir. 
+A medida que continúas con tu carrera de ciencia de datos, aprenderás varias constantes que simplemente resultan ser porque las personas son lógicas y razonables. En nuestro caso, debemos tomar los datos de todos los estados. ¿Cómo podríamos hacer esto? ¿Necesitamos agarrar cada ticker de forma manual? No. Mirando este ticker, vemos FMAC / HPI_TX. Podemos descifrar esto fácilmente a FMAC = Freddie Mac. HPI = Índice de precios de la vivienda. TX significa Texas, la abreviatura común de 2 letras para el estado. A partir de aquí, podemos suponer con seguridad que todos los tickers están construidos de esta manera, por lo que ahora solo necesitamos una lista de las abreviaturas de estado. Lo buscamos en Google, haga una elección como Esta lista de los 50 estados. ¿Ahora que? 
+
+
+
+
+4.2  Leyendo HTML con Pandas
+Podemos extraer estos datos de varias formas. Este es un tutorial de  Pandas, así que si podemos usar Pandas, lo haremos. Vamos a ver el read_html de Pandas. Ya no se lo llama "experimental", pero aún así lo calificaría como expirimental. El estándar y la calidad de los otros módulos IO es muy alto y confiable. Este read_html no está a la altura, pero sigo diciendo que es un código muy impresionante y útil, y simplemente genial. La forma en que funciona es simplemente alimentar una URL, y Pandas extraerá la fecha digna de dataframe de las tablas en un DataFrame. Esto significa que, a diferencia de los otros métodos típicos que generalmente usará, read_html termina leyendo en una lista de DataFrames. Este no es el único que es diferente, pero es diferente. Primero, para usar read_html, necesitamos html5lib. Abre cmd.exe o tu terminal y haz: pip install html5lib. Ahora, podemos hacer nuestro primer intento haciendo: 
+fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
+print(fiddy_states)
+
+
+Esto va más allá del alcance de este curso, pero entiendes la idea. Al menos algunos de estos datos son los que queremos, y parece que el primer DataFrame ha tenido un buen comienzo. Entonces, hagamos lo siguiente: 
+print(fiddy_states[0])
+
+
+
+
+
+Sí, se ve bien, queremos la columna 0. Entonces, queremos iterar a través de la columna 0 de fiddy_states [0]. 
+Recuerde, en este momento, fiddy_states es una lista de DataFrames, y fiddy_states [0] es el primer DataFrame. Para hacer referencia a la  columna  hacemos fiddy_states [0] [0]. Uno es un índice de lista, que devuelve un DataFrame. La otra es una columna dentro del DataFrame. 
+A continuación, notamos que el primer elemento en la columna 0 es la palabra "abreviatura", que no queremos. Podemos soltar eso cuando iteremos a través de todos los elementos en la columna 0 haciendo la columna 0 [1:]. Como tal, nuestra lista de abreviaturas es fiddy_states [0] [1] [1:], y podemos iterar de la siguiente manera: 
+for abbv in fiddy_states[0][1][1:]:
+    print(abbv)
+AL
+AK
+AZ
+AR
+CA
+¡Perfecto! Ahora, recordamos por qué estamos haciendo esto en primer lugar: estamos tratando de construir los tickers con las abreviaturas del estado para adquirir el índice de precios de la vivienda para cada estado. De acuerdo, podemos construir el ticker: 
+4.3  Construir el ticker
+for abbv in fiddy_states[0][0][1:]:
+    #print(abbv)
+    print("FMAC/HPI_"+str(abbv))
+FMAC/HPI_1
+FMAC/HPI_2
+FMAC/HPI_3
+FMAC/HPI_4
+Tenemos los tickers, ahora estamos listos para extraer los dataframes. Pero entonces, ¿qué vamos a hacer una vez que los obtengamos? ¿Vamos a trabajar con 50 DataFrames separados? Suena como una idea tonta, necesitamos alguna forma de combinarlos. Las buenas personas detrás de Pandas lo vieron venir, y nos han proporcionado muchas formas de combinar DataFrames. Hablaremos eso en el próximo tutorial. 
+4.4  Combinar DataFrames. Cocatenating y appending
+Bienvenido a la Parte 5 de nuestra serie de tutoriales Análisis de datos con Python y Pandas. En este tutorial, cubriremos cómo combinar DataFrames de varias maneras.
+
+En nuestro caso con la inversión en bienes raíces, esperamos tomar los 50 DataFrames con datos de vivienda y luego simplemente combinarlos en un solo DataFrame. Hacemos esto por múltiples razones. Primero, es más fácil y simplemente tiene sentido combinarlos, pero también dará como resultado que se use menos memoria. Cada dataframe tiene una columna de fecha y valor. Esta columna de fecha se repite en todos los DataFrames, pero en realidad todos deberían simplemente compartir una fecha, efectivamente reduciendo a la mitad nuestro recuento total de columnas.
+
+Al combinar dataframes, puede tener bastantes objetivos en mente. Por ejemplo, es posible que desee "agregar"  en ellos, filas o más  columnas, como en nuestro caso. 
+Hay cuatro formas principales de combinar dataframes, que comenzaremos a cubrir ahora. Las cuatro formas principales son: concatenación, unión, fusión y anexión. Comenzaremos con Concatenación. Aquí hay algunos DataFrames iniciales: 
+import pandas as pd
+
+df1 = pd.DataFrame({'HPI':[80,85,88,85],
+                    'Int_rate':[2, 3, 2, 2],
+                    'US_GDP_Thousands':[50, 55, 65, 55]},
+                   index = [2001, 2002, 2003, 2004])
+
+df2 = pd.DataFrame({'HPI':[80,85,88,85],
+                    'Int_rate':[2, 3, 2, 2],
+                    'US_GDP_Thousands':[50, 55, 65, 55]},
+                   index = [2005, 2006, 2007, 2008])
+
+df3 = pd.DataFrame({'HPI':[80,85,88,85],
+                    'Int_rate':[2, 3, 2, 2],
+                    'Low_tier_HPI':[50, 52, 50, 53]},
+                   index = [2001, 2002, 2003, 2004])
+
+
+				
+
+	df1																				df2
+
+
+
+
+
+
+
+					df3
+
+
+
+
+
+
+
+4.5  Concatenación
+Tenga en cuenta que hay dos cambios principales entre estos. df1 y df3 tienen el mismo índice, pero tienen algunas columnas diferentes. df2 y df3 tienen diferentes índices y algunas columnas diferentes. Con la concatenación, podemos hablar de varios métodos para unirlos. Probemos una concatenación simple: 
+
+
+
+
+
+concat = pd.concat([df1,df2], sort=True)
+print(concat)
+      HPI  Int_rate  US_GDP_Thousands
+2001   80         2                50
+2002   85         3                55
+2003   88         2                65
+2004   85         2                55
+2005   80         2                50
+2006   85         3                55
+2007   88         2                65
+2008   85         2                55
+Como las columnas son iguales en ambos df y el índice son fechas, añade a continuación del df1, filas del df2.
+Suficientemente fácil. La principal diferencia entre estos fue simplemente una continuación del índice, pero compartieron las mismas columnas. Ahora se han convertido en un único DataFrame. En nuestro caso, sin embargo, tenemos curiosidad por agregar columnas, no filas. ¿Qué sucede cuando combinamos algunas compartidas y algunas nuevas? 
+concat = pd.concat([df1,df2,df3].sort=True)
+print(concat)
+      HPI  Int_rate  Low_tier_HPI  US_GDP_Thousands
+2001   80         2           NaN              50.0
+2002   85         3           NaN              55.0
+2003   88         2           NaN              65.0
+2004   85         2           NaN              55.0
+2005   80         2           NaN              50.0
+2006   85         3           NaN              55.0
+2007   88         2           NaN              65.0
+2008   85         2           NaN              55.0
+2001   80         2          50.0               NaN
+2002   85         3          52.0               NaN
+2003   88         2          50.0               NaN
+2004   85         2          53.0               NaN
+Añade las filas de cada df, en el orden df1, df2 y df3. 
+Inserta una columna nueva “ Low_tier_HPI”
+Pone NaN cuando faltan datos.
+No está mal, tenemos algunos NaN (no un número), porque esta información no existía para ese índice, pero todos nuestros datos están aquí.
+
+Esos son los conceptos básicos de la concatenación, el siguiente paso, vamos a cubrir anexando. 
+4.6  Append. Agregar
+Agregar es como el primer ejemplo de concatenación, solo un poco más contundente, ya que el DataFrame simplemente se agregará a las filas. Vamos a mostrar un ejemplo de cómo suele funcionar, pero también mostrar dónde podría salir mal: 
+df4 = df1.append(df2,sort=True)
+print(df4)
+      HPI  Int_rate  US_GDP_Thousands
+2001   80         2                50
+2002   85         3                55
+2003   88         2                65
+2004   85         2                55
+2005   80         2                50
+2006   85         3                55
+2007   88         2                65
+2008   85         2                55
+Es como si insertáramos filas nuevas en una base de datos.
+Eso es lo que esperamos con un appen. En la mayoría de los casos, vas a hacer algo como esto, como si estuvieras insertando una nueva fila en una base de datos. 
+En realidad, los dataframes no se elaboraron para anexarlos de manera eficiente, sino para manipularlos en función de sus datos iniciales, pero puede agregarlos si lo necesita. ¿Qué sucede cuando agregamos datos con el mismo índice? 
+df4 = df1.append(df3,sort=True))
+print(df4)
+      HPI  Int_rate  Low_tier_HPI  US_GDP_Thousands
+2001   80         2           NaN              50.0
+2002   85         3           NaN              55.0
+2003   88         2           NaN              65.0
+2004   85         2           NaN              55.0
+2001   80         2          50.0               NaN
+2002   85         3          52.0               NaN
+2003   88         2          50.0               NaN
+2004   85         2          53.0               NaN
+
+
+
+
+
+Bueno, eso es desafortunado. Algunas personas preguntan por qué tanto la concatenación como la salida de append. Es por eso. Aquí es mucho más eficiente combinar estos DataFrames ya que las columnas compartidas contienen los mismos datos y el mismo índice. 
+Un ejemplo más es agregar posiblemente una serie. Es más probable que agregue una serie que cuadros de datos completos dada la naturaleza de append. No hemos hablado sobre series hasta este punto. Una serie es básicamente un DataFrame de una sola columna. Una serie tiene un índice, pero, si la convierte en una lista, serán solo esos valores. Cuando decimos algo como df ['columna'], el retorno es una serie. 
+s = pd.Series([80,2,50], index=['HPI','Int_rate','US_GDP_Thousands'])
+df4 = df1.append(s, ignore_index=True)
+print(df4)
+   HPI  Int_rate  US_GDP_Thousands
+0   80         2                50
+1   85         3                55
+2   88         2                65
+3   85         2                55
+4   80         2                50
+Tenemos que ignorar el índice al agregar una serie, porque esa es la ley, a menos que la serie tenga un nombre.
+
+Aquí, hemos unido los DataFrames con Concat  y append en pandas. A continuación, vamos a hablar sobre cómo unir y fusionar DataFrames. 
+5.  Joint y Merging DataFrames
+En esta parte, vamos a hablar acerca de cómo unir y fusionar DataFrames, como otro método para combinar DataFrames. En el tutorial anterior, cubrimos la concatenación y el anexado. 
+Primero comenzaremos con algunos DataFrames de muestra como antes, con un cambio: 
+df1 = pd.DataFrame({'HPI':[80,85,88,85],
+                    'Int_rate':[2, 3, 2, 2],
+                    'US_GDP_Thousands':[50, 55, 65, 55]},
+                   index = [2001, 2002, 2003, 2004])
+
+df2 = pd.DataFrame({'HPI':[80,85,88,85],
+                    'Int_rate':[2, 3, 2, 2],
+                    'US_GDP_Thousands':[50, 55, 65, 55]},
+                   index = [2005, 2006, 2007, 2008])
+
+df3 = pd.DataFrame({'HPI':[80,85,88,85],
+                    'Unemployment':[7, 8, 9, 6],
+                    'Low_tier_HPI':[50, 52, 50, 53]},
+                   index = [2001, 2002, 2003, 2004])
+print(pd.merge(df1,df3, on='HPI'))
+
+   HPI  Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+0   80         2                50             7            50
+1   85         3                55             8            52
+2   85         3                55             6            53
+3   85         2                55             8            52
+4   85         2                55             6            53
+5   88         2                65             9            50
+Entonces, aquí vemos cómo haby una columna compartida (HPI). Puede compartir  varias columnas, aquí hay un ejemplo de eso: 
+print(pd.merge(df1,df2, on=['HPI','Int_rate']))
+
+   HPI  Int_rate  US_GDP_Thousands_x  US_GDP_Thousands_y
+0   80         2                  50                  50
+1   85         3                  55                  55
+2   88         2                  65                  65
+3   85         2                  55                  55
+Observe que hay dos versiones de US_GDP_Thousands. Esto se debe a que no compartimos en estas columnas, por lo que ambas se conservan, con otra letra para diferenciarlas. ¿Recuerdas cuando decíamos que Pandas es un gran módulo para casarse con una base de datos como mysql? este es el por qué.
+
+Generalmente, con las bases de datos, deseamos mantenerlas lo más ligeras posible para que las consultas que se realizan en ellas puedan ejecutarse lo más rápidamente posible. 
+Digamos que ejecuta un sitio web como pythonprogramming.net, donde tiene usuarios, por lo que definitivamente desea rastrear los hash de nombre de usuario y contraseñas cifradas, así que eso es 2 columnas para asegurarse. Quizás entonces tenga un nombre de usuario, un nombre de usuario, una contraseña, un correo electrónico y una fecha de reunión. Entonces eso ya son 5 columnas con puntos de datos básicos. Entonces tal vez tengas algo así como configuración de usuario, publicaciones si tienes un foro, tutoriales completados. Entonces tal vez quieras tener configuraciones como administrador, moderador, usuario regular. 
+Las listas pueden seguir y seguir. Si tiene literalmente solo 1 tabla masiva, esto puede funcionar, pero también podría ser mejor distribuir la tabla, ya que muchas operaciones simplemente serán mucho más rápidas y eficientes. Después de mergin, probablemente establezcas el nuevo índice. Algo como esto: 
+df4 = pd.merge(df1,df3, on='HPI')
+df4.set_index('HPI', inplace=True)
+print(df4)
+     Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+HPI                                                        
+80          2                50             7            50
+85          3                55             8            52
+85          3                55             6            53
+85          2                55             8            52
+85          2                55             6            53
+88          2                65             9            50
+
+Now, what if HPI was already the index? Or, in our case, We'll probably be joining on the dates, but the dates might be the index. In this case, we'd probably use join. 
+5.1 Fusión. Joint
+df1.set_index('HPI', inplace=True)
+df3.set_index('HPI', inplace=True)
+
+joined = df1.join(df3)
+print(joined)
+     Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+HPI                                                        
+80          2                50             7            50
+85          3                55             8            52
+85          3                55             6            53
+85          2                55             8            52
+85          2                55             6            53
+88          2                65             9            50
+5.2  Anexión. Merging
+Ahora, consideremos join y merging en índices ligeramente diferentes. Redefinamos los dataframes con df1 y df3 comenzando, convirtiéndolos en: 
+df1 = pd.DataFrame({
+                    'Int_rate':[2, 3, 2, 2],
+                    'US_GDP_Thousands':[50, 55, 65, 55],
+                    'Year':[2001, 2002, 2003, 2004]
+                    })
+
+df3 = pd.DataFrame({
+                    'Unemployment':[7, 8, 9, 6],
+                    'Low_tier_HPI':[50, 52, 50, 53],
+                    'Year':[2001, 2003, 2004, 2005]})
+Ahora tenemos similar la columna year, pero diferentes fechas. df3 tiene 2005 pero no 2002, y df1 es el inverso de eso. Ahora, ¿qué pasa cuando nos fusionamos (merge)? 
+merged = pd.merge(df1,df3, on='Year')
+print(merged)
+   Int_rate  US_GDP_Thousands  Year  Unemployment  Low_tier_HPI
+0         2                50  2001             7            50
+1         2                65  2003             8            52
+2         2                55  2004             9            50
+Ahora, un poco más útil: 
+merged = pd.merge(df1,df3, on='Year')
+merged.set_index('Year', inplace=True)
+print(merged)
+      Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+Year                                                        
+2001         2                50             7            50
+2003         2                65             8            52
+2004         2                55             9            50
+Observe cómo faltan totalmente 2005 y 2002? Merge combinará de forma nativa los datos existentes / compartidos. ¿Qué podemos hacer al respecto? Resulta que hay un parámetro de "how" cuando se fusiona. Este parámetro refleja las opciones de fusión que provienen de la fusión de bases de datos. Usted tiene las siguientes opciones: izquierda, derecha, exterior interna.
+
+	- Left - igual a la combinación externa izquierda SQL - use las claves 	solo del marco izquierdo
+	- Right - unión externa derecha desde SQL: use las claves del cuadro 	derecho solamente.
+	- Outer: unión externa completa: utilice la unión de tlas claves
+	- Inner: use solo la intersección de las claves
+. 
+merged = pd.merge(df1,df3, on='Year', how='left')
+merged.set_index('Year', inplace=True)
+print(merged)
+      Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+Year                                                        
+2001         2                50           7.0          50.0
+2002         3                55           NaN           NaN
+2003         2                65           8.0          52.0
+2004         2                55           9.0          50.0
+La fusión a la izquierda está literalmente en el DataFrame izquierdo. Teníamos df1, df3, el de la izquierda es el primero, df1. Entonces, terminamos con un índice que era idéntico al DataFrame izquierdo (df1). 
+merged = pd.merge(df1,df3, on='Year', how='right')
+merged.set_index('Year', inplace=True)
+print(merged)
+      Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+Year                                                        
+2001       2.0              50.0             7            50
+2003       2.0              65.0             8            52
+2004       2.0              55.0             9            50
+2005       NaN               NaN             6            53
+Elegimos a la derecha, por lo que esta vez el índice aquí es el de la derecha (df3). 
+merged = pd.merge(df1,df3, on='Year', how='outer')
+merged.set_index('Year', inplace=True)
+print(merged)
+      Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+Year                                                        
+2001       2.0              50.0           7.0          50.0
+2002       3.0              55.0           NaN           NaN
+2003       2.0              65.0           8.0          52.0
+2004       2.0              55.0           9.0          50.0
+2005       NaN               NaN           6.0          53.0
+Esta vez, hicimos outer, que es una unión de las claves. Esto significa que se muestran todos los índices. 
+merged = pd.merge(df1,df3, on='Year', how='inner')
+merged.set_index('Year', inplace=True)
+print(merged)
+      Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+Year                                                        
+2001         2                50             7            50
+2003         2                65             8            52
+2004         2                55             9            50
+Finalmente, "inner" es la intersección de las claves, básicamente lo que se comparte entre todos los conjuntos. Cada uno de estos tiene su propio razonamiento, pero, como puede ver, la opción predeterminada es "inner".
+
+Ahora podemos verificar join, que se unirá al índice, para que podamos hacer algo como esto: 
+df1.set_index('Year', inplace=True)
+df3.set_index('Year', inplace=True)
+joined = df1.join(df3, how="outer")
+print(joined)
+      Int_rate  US_GDP_Thousands  Unemployment  Low_tier_HPI
+Year                                                        
+2001       2.0              50.0           7.0          50.0
+2002       3.0              55.0           NaN           NaN
+2003       2.0              65.0           8.0          52.0
+2004       2.0              55.0           9.0          50.0
+2005       NaN               NaN           6.0          53.0
+De acuerdo, creo que ya hemos tratado lo suficiente sobre la combinación de DataFrames. Regresemos a nuestra investigación real con nuestro nuevo conocimiento y construyamos un conjunto de datos épico. 
+COMPLEMENTO: 
+merge() no acepta una lista de Dataframe a lo sumo permite pasarle dos de estos objetos. Pero puedes iterar sobre la lista y hacer el proceso de merge. Por ejemplo: 
+import pandas as pd
+import numpy as np
+
+df1 = pd.DataFrame(np.array([['a', 1, 2]]))
+df2 = pd.DataFrame(np.array([['b', 3, 4]]))
+df3 = pd.DataFrame(np.array([['c', 5, 6]]))
+
+dfs = [df1, df2, df3]
+Hemos creado una lista dfs que contiene 3 DataFrame, ahora podemos hacer el merge 
+dfs = iter(dfs)
+df_final = next(dfs)
+for df_ in dfs:
+    df_final = df_final.merge(df_, left_index=True, right_index=True)
+
+print(df_final)
+Detalle:
+    • Con dfs = iter(dfs) convertimos la lista en un iterador, esto por la forma en que vamos a procesar, al necesitar por un lado el primer elemento y luego el resto, es preferible hacerlo así y evitar hacer copias de listas.
+    • Con df_final = next(dfs) inicializamos el DataFrame final con el primer objeto de la lista
+    • Luego simplemente iteramos sobre los siguientes elementos de la lista y con df_final = df_final.merge(df_, left_index=True, right_index=True) vamos haciendo el merge de cada objeto.
+Un resultado idéntico pero con menos líneas de código es usar la función reduce()
+from functools import reduce
+
+dfs = [df1, df2, df3]
+df_final = reduce(lambda left,right: pd.merge(left,right,left_index=True, right_index=True), dfs)
+print(df_final)
+RESUMEN:
+Una diferencia de nivel muy alto es que merge () se usa para combinar dos (o más) dataframes sobre la base de valores de columnas comunes (los índices también se pueden usar, use left_index = True y / right_index = True).
+Concat ( ) se utiliza para anexar uno (o más) dataframes uno debajo del otro (o hacia los lados, dependiendo de si la opción del eje se establece en 0 o 1)
+Join () se utiliza para fusionar 2 dataframes sobre la base del índice; en lugar de usar merge () con la opción left_index = True, podemos usar join (). 
+6.  Pickling 
+En los últimos tutoriales, aprendimos cómo combinar conjuntos de datos. En este tutorial, vamos a resumir bajo la premisa de que estamos aspirando a magnates de bienes raíces. Buscamos proteger nuestra riqueza al tener riqueza diversificada, y un componente de esto es el real-estate. En la Parte 4, tuvimos la siguiente configuración de código: 
+# importa la lista que se encuentra en la página del enlace
+import quandl
+import pandas as pd
+
+# Not necessary, I just do this so I do not show my API key.
+api_key = open('quandlapikey.txt','r').read()
+fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
+for abbv in fiddy_states[0][0][1:]:
+    #print(abbv)
+    print("FMAC/HPI_"+str(abbv))
+FMAC/HPI_1
+FMAC/HPI_2
+FMAC/HPI_3
+FMAC/HPI_4
+FMAC/HPI_5
+Este código se usó para obtener los 50 estados, iterar a través de ellos y generar la consulta Quandl apropiada para devolver el índice de precios de la vivienda por estado. Como terminaremos con 50 DataFrames aquí, preferimos combinarlos todos en uno masivo. Para hacer esto, podemos usar .join, que aprendimos en el tutorial anterior. Utilizaremos .join en este caso porque los datos nos son devueltos, utilizando el módulo Quandl, con un índice real, Fecha. Normalmente, probablemente no obtendrás esto, solo serán dataframes con números regulares para el índice. En ese caso, usaría concatenar, con on = 'Fecha'.
+
+Ahora, para ejecutar y recopilar todos los datos, podemos hacer el siguiente cambio: 
+api_key = "1KPAsT__H3CRmAJDn4Xk"
+# buscando estados
+fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
+main_df = pd.DataFrame()
+for abbv in fiddy_states[0][0][1:]:
+    #print(abbv)
+    query = "FMAC/HPI_"+str(abbv)
+    df = quandl.get(query, authtoken=api_key)
+    if main_df.empty:
+        main_df = df
+    else:
+        main_df = main_df.join(df)
+NOTA: Quandl has since changed the returns of datasets, to where if the return has one column (or so it seems to me), then the title of that column is just "value." Well, that's irritating, but we can work around it. In our for loop, rename the dataframe's column to what our abbv value is. Without making this change, you will likely be seeing: 
+Quandl ha cambiado las devoluciones de datasets, a donde si la devolución tiene una columna (o al menos eso me parece), entonces el título de esa columna es solo "value". Bueno, eso es irritante, pero podemos evitarlo. En nuestro ciclo for, cambie el nombre de la columna del DataFrame a lo que es nuestro valor de abbv. Sin realizar este cambio, probablemente verá: ValueError: columns overlap but no suffix specified: Index([u'Value'], dtype='object')  
+Genial, pero descubrirá que este proceso puede tomar entre 30 segundos y unos minutos, cada vez que quiera ejecutarlo. Eso es bastante molesto En este momento, su objetivo a corto plazo es hacer que esto suceda, pero ¿qué sigue? Vamos a seguir trabajando en esto, y cada vez que hagamos una prueba o lo que sea, ¡tendremos que aguantar esta tontería! Por eso, queremos guardar esta información. Ahora, este es un análisis de datos y un tutorial de Pandas. Con Pandas, podríamos simplemente enviar los datos a un archivo CSV, o al tipo de datos que queramos, incluido lo que vamos a hablar. Sin embargo, es posible que no siempre tenga la opción de enviar los datos a un archivo simple. En cualquier caso, queremos guardar esta información en un archivo, por lo que solo debemos hacer esta acción una vez, luego podemos construir sobre ella. 
+Cuando se trata de algo así como el aprendizaje automático, por ejemplo. Generalmente entrena un clasificador (classifier), y luego puede comenzar de inmediato y rápidamente, clasificando con ese clasificador. El problema es que un clasificador no se puede guardar en un archivo .txt o .csv. Es un objeto. Afortunadamente, en la programación, hay varios términos para el proceso de guardar datos binarios en un archivo al que se puede acceder más adelante. En Python, esto se llama decapado (pickling). Puede conocerlo como serialización, o tal vez incluso algo más. Python tiene un módulo llamado Pickle, que convertirá su objeto a una secuencia de bytes, o al revés con unpickle. Lo que esto nos permite hacer es guardar cualquier objeto de Python. ¿Ese machine learning classifier? Sí. ¿Diccionario? Sí señor. ¿DataFrame? ¡Sí! Ahora, sucede que Pandas tiene pickles   en su módulo IO, pero realmente debes saber cómo hacerlo con y sin Pandas, ¡así que hagámoslo!
+
+Primero, hablemos de un pickle común. Puede hacer esto con cualquier objeto de Python que desee, no necesita ser un DataFrame, pero lo haremos con nuestro DataFrame.
+
+Primero, importa pickle en la parte superior de tu script 
+import pickle
+Luego
+pickle_out = open('fiddy_states.pickle','wb')
+pickle.dump(main_df, pickle_out)
+pickle_out.close()
+Primero abrimos un archivo .pickle con la intención de escribir algunos bytes. Luego, seleccionamos pickle.dump para volcar los datos que queremos recortar, y luego dónde volcarlos (el archivo que acabamos de abrir). Finalmente, cerramos cualquier archivo. Hemos guardado pickle.
+
+Sin embargo, me gustaría que organicemos este código ahora. No queremos ejecutar este código todas las veces, pero aún así queremos hacer referencia a la lista de estado de vez en cuando. Vamos a limpiar esto un poco: 
+import Quandl
+import pandas as pd
+import pickle
+
+# Not necessary, I just do this so I do not show my API key.
+api_key = open('quandlapikey.txt','r').read()
+
+def state_list():
+    fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
+    return fiddy_states[0][0][1:]
+    
+
+def grab_initial_state_data():
+    states = state_list()
+
+    main_df = pd.DataFrame()
+
+    for abbv in states:
+        query = "FMAC/HPI_"+str(abbv)
+        df = Quandl.get(query, authtoken=api_key)
+        print(query)
+        if main_df.empty:
+            main_df = df
+        else:
+            main_df = main_df.join(df)
+            
+    pickle_out = open('fiddy_states.pickle','wb')
+    pickle.dump(main_df, pickle_out)
+    pickle_out.close()        
+
+    
+grab_initial_state_data()
+OJO, me da el siguiente error:
+
+NotFoundError: (Status 404) (Quandl Error QECx02) You have submitted an incorrect Quandl code. Please check your Quandl codes and try again.
+
+Ahora, podemos hacer referencia a state_list en cualquier momento que necesitemos esa lista de estado, y luego simplemente llamamos a grab_initial_state_data muy rápido para la línea base de HPI, y hemos guardado esa información en un archivo pickle.
+
+Ahora, para obtener esos datos nuevamente, solo tenemos que hacer: 
+pickle_in = open('fiddy_states.pickle','rb')
+HPI_data = pickle.load(pickle_in)
+print(HPI_data)
+El resultado es más de lo que quiero pegar aquí, pero debería obtener un DataFrame que sea ~ 462 filas x 50 columnas. Ahí tienes. Parte del objeto es que es un DataFrame, es nuestra manera de simplemente "guardar" una variable. ¡Muy genial! Puedes hacer esto con el módulo Pickle en cualquier parte de Python, pero resulta que Pandas también tiene su propio pickle, así que también podríamos ilustrar eso: 
+HPI_data.to_pickle('pickle.pickle')
+HPI_data2 = pd.read_pickle('pickle.pickle')
+print(HPI_data2)
+Nuevamente, la producción es demasiado grande para pegar aquí, pero debería obtener lo mismo. Si eres como yo, te preguntarás "¿por qué los Pandas hicieron su propia opción, si todo Python ya tiene uno que funciona bien?" Realmente no lo se. Aparentemente, los Pandas a veces pueden ser más rápidos en conjuntos de datos masivos. 
+7.  Leccion 8.   Tablas de Porcentaje de camBio y correlación.
+ Bienvenido a la parte 8 de nuestra serie de tutoriales Análisis de datos con Python y Pandas. En esta parte, vamos a hacer algunas de nuestras primeras manipulaciones en los datos. Nuestra secuencia de comandos hasta este punto es: 
+import quandl
+import pandas as pd
+import pickle
+# Not necessary, I just do this so I do not show my API key.
+api_key = open('quandlapikey.txt','r').read()
+def state_list():
+    fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
+    return fiddy_states[0][0][1:]    
+def grab_initial_state_data():
+    states = state_list()
+    main_df = pd.DataFrame()
+
+    for abbv in states:
+        query = "FMAC/HPI_"+str(abbv)
+        df = quandl.get(query, authtoken=api_key)
+        print(query)
+        if main_df.empty:
+            main_df = df
+        else:
+            main_df = main_df.join(df)        
+    pickle_out = open('fiddy_states.pickle','wb')
+    pickle.dump(main_df, pickle_out)
+    pickle_out.close()        
+HPI_data = pd.read_pickle('fiddy_states.pickle')
+Ahora podemos modificar columnas como estas: 
+HPI_data['TX2'] = HPI_data['TX'] * 2
+print(HPI_data[['TX','TX2']].head())
+Salida
+
+Tampoco podríamos haber hecho una nueva columna, simplemente redefinimos la TX original si así lo decidimos. Eliminando todo el bit de código "TX2" de nuestro script, visualicemos lo que tenemos ahora. En la parte superior de tu script: 
+
+import matplotlib.pyplot as plt
+from matplotlib import style
+style.use('fivethirtyeight')
+Y ahora en la parte inferior:
+HPI_data.plot()
+plt.legend().remove()
+plt.show()
+Salida
+Hmm, interesante, ¿qué está pasando? ¡Todos esos precios parecen converger perfectamente en 2000! Bueno, esto es justo cuando comienza el 100.0% del índice. Podríamos salir adelante con esto, pero simplemente no soy un fanático. ¿Qué pasa con algún tipo de cambio porcentual? Resulta que Pandas te tiene cubierto aquí con todo tipo de estadísticas "continuas". Podemos dar una bofetada a uno básico, como este: 
+def grab_initial_state_data():
+    states = state_list()
+
+    main_df = pd.DataFrame()
+
+    for abbv in states:
+        query = "FMAC/HPI_"+str(abbv)
+        df = Quandl.get(query, authtoken=api_key)
+        print(query)
+        df = df.pct_change()
+        print(df.head())
+        if main_df.empty:
+            main_df = df
+        else:
+            main_df = main_df.join(df)
+            
+    pickle_out = open('fiddy_states2.pickle','wb')
+    pickle.dump(main_df, pickle_out)
+    pickle_out.close()
+
+grab_initial_state_data() 
+Principalmente, quiere tomar nota de: df = df.pct_change (), volveremos a ejecutar esto, guardando en fiddy_states2.pickle. Cabe destacar que también podríamos intentar modificar el pickle original, en lugar de volver a tirar. Ese era el punto de pickle, después de todo. Si no tuviera un sesgo retrospectivo, podría estar de acuerdo contigo. 
+HPI_data = pd.read_pickle('fiddy_states2.pickle')
+
+HPI_data.plot()
+plt.legend().remove()
+plt.show()
+Salida:
+
+No es lo que estaba pensando, desafortunadamente. Quiero un gráfico tradicional de% de cambio. Esto es% de cambio desde el último valor informado. Podríamos aumentarlo, y hacer algo así como un% de los últimos 10 valores, pero todavía no es lo que quiero. Probemos algo más: 
+def grab_initial_state_data():
+    states = state_list()
+
+    main_df = pd.DataFrame()
+
+    for abbv in states:
+        query = "FMAC/HPI_"+str(abbv)
+        df = Quandl.get(query, authtoken=api_key)
+        print(query)
+        df[abbv] = (df[abbv]-df[abbv][0]) / df[abbv][0] * 100.0
+        print(df.head())
+        if main_df.empty:
+            main_df = df
+        else:
+            main_df = main_df.join(df)
+            
+    pickle_out = open('fiddy_states3.pickle','wb')
+    pickle.dump(main_df, pickle_out)
+    pickle_out.close()
+        
+grab_initial_state_data()   
+
+HPI_data = pd.read_pickle('fiddy_states3.pickle')
+
+HPI_data.plot()
+plt.legend().remove()
+plt.show()
+
+Bingo, ¡eso es lo que estoy buscando! Esto es un% de cambio para el HPI mismo, por estado. El primer cambio% sigue siendo útil también por varias razones. Puede que acabemos usando eso en conjunto o en su lugar, pero, por ahora, nos mantendremos con el porcentaje de cambio típico desde un punto de partida.
+
+Ahora, podemos traer los otros conjuntos de datos, pero veamos si podemos llegar a cualquier parte por nuestra cuenta. En primer lugar, podríamos verificar algún tipo de "punto de referencia", por así decirlo. Para estos datos, ese punto de referencia sería el índice de precios de la vivienda para los Estados Unidos. Podemos recopilar eso con: 
+def HPI_Benchmark():
+    df = Quandl.get("FMAC/HPI_USA", authtoken=api_key)
+    df["United States"] = (df["United States"]-df["United States"][0]) / df["United States"][0] * 100.0
+    return df
+A continuación hacemos:
+fig = plt.figure()
+ax1 = plt.subplot2grid((1,1), (0,0))
+
+HPI_data = pd.read_pickle('fiddy_states3.pickle')
+benchmark = HPI_Benchmark()
+HPI_data.plot(ax=ax1)
+benchmark.plot(color='k',ax=ax1, linewidth=10)
+
+plt.legend().remove()
+plt.show()
+Salida:
+
+Al observar estos datos, parece ser que todos los mercados se están obedeciendo relativamente entre sí, así como el índice general de precios de la vivienda. Existe una desviación media aquí, pero básicamente todos los mercados parecen seguir una tendencia muy similar. Al final termina siendo una gran divergencia, del 200% de aumento al 800% de aumento, así que obviamente tenemos una gran divergencia allí, pero la media está entre 400 y 500% de crecimiento en los últimos 30 años superiores.
+
+¿Cómo podríamos acercarnos a los mercados posiblemente? Más adelante, podríamos tener en cuenta los datos demográficos y las tasas de interés para predecir el futuro, pero no todos están interesados en el juego de la especulación. Algunas personas quieren inversiones más seguras y seguras. Me parece que aquí, como los mercados inmobiliarios, nunca fallan realmente a nivel estatal. Obviamente, nuestro plan podría fallar si compramos una casa que luego descubrimos que tiene una gran infestación de termitas y podría colapsar en cualquier momento. 
+Manteniéndome macro, es claro para mí que podríamos entablar una situación de intercambio de pares muy, aparentemente, segura aquí. Podemos recopilar información de correlación y covarianza muy fácilmente con pandas. Correlación y covarianza son dos temas muy similares, a menudo confusos. La correlación no es causalidad, y la correlación casi siempre se incluye en los cálculos de covarianza para normalizar. La correlación es la medida del grado en que dos activos se mueven en relación uno con el otro. La covarianza es la medida de cómo dos activos tienden a variar juntos. Tenga en cuenta que la correlación es una medida del "grado" de. La covarianza no es ¡Esa es la distinción importante si mi propio entendimiento no es incorrecto!
+
+Vamos a crear una tabla de correlación. Lo que esto hará por nosotros, es mirar hacia atrás históricamente, y medir la correlación entre los movimientos de cada estado a cada otro estado. Entonces, cuando dos estados que normalmente están altamente correlacionados comienzan a divergir, podríamos considerar vender una propiedad en la que está subiendo, y comprar una propiedad en la que está cayendo como una especie de estrategia de mercado neutral en la que solo nos estamos beneficiando. la brecha, en lugar de hacer algún tipo de intento de predecir el futuro. Los estados que bordean entre sí probablemente tengan más correlaciones similares que los que están lejos, pero veremos lo que dicen los números. 
+HPI_data = pd.read_pickle('fiddy_states3.pickle')
+HPI_State_Correlation = HPI_data.corr()
+print(HPI_State_Correlation)
+La salida debe ser 50 filas x 50 columnas, aquí hay algo de la salida: 
+          AL        AK        AZ        AR        CA        CO        CT  \
+AL  1.000000  0.944603  0.927361  0.994896  0.935970  0.979352  0.953724   
+AK  0.944603  1.000000  0.893904  0.965830  0.900621  0.949834  0.896395   
+AZ  0.927361  0.893904  1.000000  0.923786  0.973546  0.911422  0.917500   
+AR  0.994896  0.965830  0.923786  1.000000  0.935364  0.985934  0.948341   
+CA  0.935970  0.900621  0.973546  0.935364  1.000000  0.924982  0.956495   
+CO  0.979352  0.949834  0.911422  0.985934  0.924982  1.000000  0.917129   
+CT  0.953724  0.896395  0.917500  0.948341  0.956495  0
+Entonces ahora podemos ver la correlación en los movimientos de HPI entre cada par de estado individual. Muy interesante, y, como es obvio, todos estos son bastante altos. La correlación está limitada de -1 a positivo 1. 1 es una correlación perfecta, y -1 es una correlación negativa perfecta. La covarianza no tiene límite. ¿Te preguntas sobre algunas estadísticas más? Pandas tiene un método de descripción muy ingenioso: 
+print(HPI_State_Correlation.describe())
+Salida:
+              AL         AK         AZ         AR         CA         CO  \
+count  50.000000  50.000000  50.000000  50.000000  50.000000  50.000000   
+mean    0.969114   0.932978   0.922772   0.969600   0.938254   0.958432   
+std     0.028069   0.046225   0.031469   0.029532   0.031033   0.030502   
+min     0.858538   0.745697   0.840705   0.846968   0.861772   0.837757   
+25%     0.956262   0.921470   0.903865   0.961767   0.916507   0.949485   
+50%     0.976120   0.943562   0.922784   0.976601   0.940114   0.964488   
+75%     0.987401   0.957159   0.943081   0.989234   0.961890   0.980550   
+max     1.000000   1.000000   1.000000   1.000000   1.000000   1.000000
+
+Esto nos dice, por estado, cuál fue la correlación más baja, cuál fue la correlación promedio, cuál es la desviación estándar, el 25% más bajo, el medio (mediana / 50%) ... y así sucesivamente. Obviamente todos tienen un máximo de 1.0, porque están perfectamente correlacionados con ellos mismos. Lo más importante, sin embargo, es que todos estos estados que estamos viendo aquí (algunas de las 50 columnas se saltan, pasamos de GA a SD) tienen una correlación superior al 90% con todos los demás en promedio. Wyoming obtiene una correlación tan baja como el 74% con un estado, que, después de consultar nuestra tabla, es Michigan. Debido a esto, probablemente no querríamos invertir en Wyoming, si Michigan está liderando el paquete, o vender nuestra casa en Michigan solo porque Wyoming está cayendo fuerte. 
+Not only could we look for any deviations from the overall index, we could also look for deviations from the individual markets as well. As you can see, we have the standard deviation numbers for every state. We could make attempts to invest in real estate when the market falls below the standard deviations, or sell when markets get above standard deviation. Before we get there, let's address the concepts of smoothing out data, as well as resampling, in the next tutorial. 
+
+
+
+
+
+
+
+
+8. Proyectos/Actividades
+8.1 REP
+8.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+9. Web’s de interesanteFiltrado: 
+http://pyciencia.blogspot.com.es/2015/05/obtener-y-filtrar-datos-de-un-dataframe.html
+9.1 REP
+9.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+10. Proyectos/Actividades
+10.1 REP
+10.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+11. Proyectos/Actividades
+11.1 REP
+11.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+12. Proyectos/Actividades
+12.1 REP
+12.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+13. Proyectos/Actividades
+13.1 REP
+13.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+14. Proyectos/Actividades
+14.1 REP
+14.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+15. Proyectos/Actividades
+15.1 REP
+15.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+16. Proyectos/Actividades
+16.1 REP
+16.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+17. Proyectos/Actividades
+17.1 REP
+17.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+18. Proyectos/Actividades
+18.1 REP
+18.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+19. Proyectos/Actividades
+19.1 REP
+19.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+20. Proyectos/Actividades
+20.1 REP
+20.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+21. Proyectos/Actividades
+21.1 REP
+21.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+22. Proyectos/Actividades
+22.1 REP
+22.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+23. Proyectos/Actividades
+23.1 REP
+23.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+24. Proyectos/Actividades
+24.1 REP
+24.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+25. Proyectos/Actividades
+25.1 REP
+25.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+
+26. Proyectos/Actividades
+26.1 REP
+26.2 Script  
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+# Handler for mouse click
+    def click():
+   	global message
+   	message = "Good job!"
+ 
+
+
+26.3 Curso.
+26.3.1.1 
+En el informe
+    • Para
+
+    • x
+    • vv
+        1. Script  
+    • 
+    • #!/usr/bin/env python2
+    • # -*- coding: utf-8 -*-
+    • # Handler for mouse click
+    •     def click():
+    •    	global message
+    •    	message = "Good job!"
+
+	
