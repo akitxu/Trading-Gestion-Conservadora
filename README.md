@@ -1,4 +1,4 @@
-# Gestion de Recursos Financieros
+# Gestion de Activos Financieros
 Este proyecto se inición en el  2012, año en el que alcancé la edad de jubilación.
 
 Iniciada esta nueva fase de mi vida, me plantee intentar ocuparla con alguna actividad con largo recorrido que, planteandome nuevos retos y objetivos día a día,  me mantuviera activo de forma creativa. En este sentido agradezco enormemente la ayuda de mi hijo y mi familia, que fueron y siguen siendo un apoyo fundamental y determinante. 
