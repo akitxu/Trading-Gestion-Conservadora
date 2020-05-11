@@ -13,7 +13,7 @@ Apoyándonos en los recursos existentes en Internet, hemos desarrollado los sigu
 * **Py_Paso_Peregrino_cartera_3.0.ipynb:** Seleccionar y analizar una cartera de valores.
 * **Entender los mercados.doc:** Conceptos que permiten entender qué son y cómo se comportan los mercados.
 
-Todos están en un desarrollo contínuo y deseamos que este llegar a ser un proyecto colectivo. Estan desarrollados con mis conocimientos de Python, y es muy probable que tengan errores y sean susceptibles de mejoras.
+Todos están en un desarrollo contínuo y deseamos que este llegar a ser un proyecto colectivo. Estan desarrollados con mis conocimientos intermedios de Python, y están en fase de depuración de errores  y abiertos a todo tipo de mejoras. 
 
 [^]: NOTA
 
