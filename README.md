@@ -1,19 +1,29 @@
 # Gestion Conservadora de Activos Financieros
 
-La Inteligencia Artificial, los ordenadores, el Machine Learning con sus algoritmos, la geopolítica, etc., han hecho tan complicado el sistema financiero, que muy pocas personas son capaces de entenderlo hoy día. A la velocidad con la que está evolucionando la inteligencia artificial, dentro de muy poco tiempo alcanzaremos un punto en el que ninguna persona será capaz de entender el funcionamiento del mercado de valores.
+Los ordenadores, la Inteligencia Artificial, el Machine Learning con sus algoritmos, la geopolítica, etc., han hecho tan complicado el sistema financiero, que muy pocas personas son capaces de entenderlo hoy día. A la velocidad con la que está evolucionando la inteligencia artificial, dentro de muy poco tiempo alcanzaremos un punto en el que ninguna persona será capaz de entender el funcionamiento del mercado de valores.
 
-El **objeto** de este proyecto es **la búsqueda de estrategias de gestión de carteras  que nos permitan preservarla en la peor circunstancia que  se presente**. ¿Qué necesitamos para poder gestionar nuestra cartera, en la dirección de este objetivo?. Necesitamos herramientas y criterios de análisis  para seleccionar el tipo de activos que van a conformar nuestra cartera de modo  que  la evolución de las cotizaciones de estos activos nos permita alcanzar el objetivo.
+El **objeto** de este proyecto es **la búsqueda de estrategias de gestión de carteras  que nos permitan preservarla en la peor circunstancia que  se presente**. ¿Qué necesitamos para poder gestionar nuestra cartera, en la dirección de este objetivo?. Necesitamos **herramientas de análisis** y **criterios de decisión** para seleccionar el tipo de activos que van a conformar nuestra cartera y tomar decisiones que faciliten, basados en la evolución de las cotizaciones de estos activos, alcanzar el objetivo.
 
 Apoyándonos en los recursos existentes en Internet, hemos desarrollado los siguientes Notebooks.
+
 * **Importar_Cotizaciones-1.1:** Notebook en el que incluimos diversas posibilidades de importación de cotizaciones de valores, descargadas de diversas Web's en Internet. 
+
+
 * **Pandas_Dataframes_1.1.ipynb:** Notebook en el que hemos resumido las operaciones más frecuentemente utilizadas para el manejo de datos, en este caso financieros con Dataframes.
+
 * **Py_Estadistica_Descriptiva_1.1.ipynb:** Repaso a la estadística descritiva, utilizando Python.
+
+
 * **Py_Estadistica_Inferencial_1.1.ipynb:** Repaso a la estadística inferencial utilizando Python.
-* **Py_Paso_Peregrino_valor_3.0.ipynb:** Analizr un valor y un indice / indicador de referencia.
+* **Py_Paso_Peregrino_valor_3.0.ipynb:** Analizar un valor y un indice / indicador de referencia.
+
 * **Py_Paso_Peregrino_cartera_3.0.ipynb:** Seleccionar y analizar una cartera de valores.
+
 * **Entender los mercados.doc:** Conceptos que permiten entender qué son y cómo se comportan los mercados.
 
-Todos están en un desarrollo contínuo y deseamos que este proyecto llegue a ser un proyecto colectivo que se enriquezca y progrese con las aportaciones de más personas. Estan desarrollados con mis conocimientos intermedios de Python, y están en fase de depuración de errores  y abiertos a todo tipo correcciones y mejoras. 
+* **Estrategia Paso Peregrino.doc**: Descripción y justificaciónde de los criterios de decisión que se van implementando en el algoritmo.
+
+Todos están en un desarrollo contínuo y deseamos que este proyecto llegue a ser un proyecto colectivo que se enriquezca y progrese con las aportaciones de más personas. Estan desarrollados con mis conocimientos intermedios de Python, y están en fase de depuración de errores  y abiertos a todo tipo correcciones y sugerencias. 
 
 **NOTA**
 
