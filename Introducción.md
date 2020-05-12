@@ -20,57 +20,54 @@ En este proceso de pasos adelante y pasos atrás, he ido acumulando experiencia 
 
 Como dice el fisico** Michio Kaku**, físico, **si no compartes el conocimiento, no sirve para nada**.
 
-Las Web's concultadas, que más han aportado a mi aprendizaje son:
+**Web's consultadas**:
 
-    Linux Fundation. Introduction to Linux (LFS101)
+**Representaciones gráficas**
 
-    Iberduero S.A. Enseñanza Programada. Curso de Estadistica.
+* [Python Matplotlib Tutorial: Plotting Data And Customisation](https://blog.quantinsti.com/python-matplotlib-tutorial/#plot) blog.quantinsti.com
 
-    Python for Informáticos, por Charles Severance
+* [Tutorial matplotlib](https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=1t1&utm_creative=229765585183&utm_targetid=aud-438999696719:dsa-473406587955&utm_loc_interest_ms=&utm_loc_physical_ms=1005511&gclid=Cj0KCQiAz53vBRCpARIsAPPsz8Xg_euR5dzc1d-XVMDUjvBhuXFI7nJ5hd3pTMVUg7KakCoAb9jpQ8YaAshzEALw_wcB) DataCamp
 
-    DataCamp Introduction to Data Science in Python
+* [Visualización de datos con matplotlib](https://www.datacamp.com/community/news/data-visualization-with-matplotlib-08jy72bvzx38) DataCamp
 
-    Jupyter Notebook Tutorial: The Definitive Guide
+* [Histograms and Density Plots in Python](https://towardsdatascience.com/histograms-and-density-plots-in-python-f6bda88f5ac0)
 
-    Numpy
+* [Visualización de datos con Python](https://relopezbriega.github.io/blog/2016/09/18/visualizaciones-de-datos-con-python/) Raul E. Lopez Briega
 
-    Matplotlib:
-        Matplotlib Tutorial: Python Plotting
-        Quandal: Python Matplotlib Tutorial: Plotting Data And Customisation
-        DataCamp: Visualización de datos con matplotlib
+* (matplotlib Plotting Cookbook.pdf)
 
-    DataCamp Python For Finance: Algorithmic Trading
+**Probabilidad y Estadística**
 
-    DataCamp. Python for Finance Tutorial For Beginners
+* [Análisis estadístico con Excel](https://courses.edx.org/courses/course-v1:GalileoX+C_Estadistica01+2T2019/courseware/22af0b49661d4a4b9c38284323bd8acf/f5f9adcc7f2940eabde20f6d7c4b7704/) courses.edx.org
 
-    Python Programming for Finances
+* [Estadística en Python: Pandas, NumPy, SciPy (Parte I)](https://blog.adrianistan.eu/estadistica-python-pandas-numpy-scipy-parte-i)
 
-    DataCamp. Probabilidad y Estadistica
+[Estadística en Python: distribución binomial, normal y de Poisson (ParteVI)](https://blog.adrianistan.eu/estadistica-python-distribucion-binomial-normal-poisson-parte-vi)
 
-    LearnDatasCI. Python for Finance, Part I: Yahoo & Google Finance API, pandas, and matplotlib
+* [Estadística en Python: análisis de datos multidimensionales y regresión lineal (Parte IV)](https://blog.adrianistan.eu/estadistica-python-analisis-datos-multidimensionales-regresion-lineal-parte-iv)
 
-    Universidad de Valencia. Introduccióna la Inversión Bursátil
+* [Estadística en Python: ajustar datos a una distribución (parte VII)](https://blog.adrianistan.eu/estadistica-python-pandas-numpy-scipy-parte-i))
 
-    Udacity. Machine Learning for Trading
+* [Probabilidad y Estadística con Python](https://relopezbriega.github.io/blog/2015/06/27/probabilidad-y-estadistica-con-python/) Raul E. Lopez Briega
 
-    UC San Diego. Python for Data science
+* [Ditribución de probabilidad con Python](https://relopezbriega.github.io/blog/2016/06/29/distribuciones-de-probabilidad-con-python/) Raul E. Lopez Briega
 
-    UC San Diego. Probability and Statistics in Data Science using Python
+* [Statistical functions (scipy.stats)](https://docs.scipy.org/doc/scipy/reference/stats.html)
 
-    UNED. Fundamentos Básicos de la Inteligencia Artificial
+* [Análisis estadístico con Python](https://www.codigofuente.org/series/estadistica-con-python
 
-    Scaling Financial Insights with Python
+* Curso de Estadística. Enseñanza Programada de Iberduero S.A.
 
-    Raul E. Lopez Briega. Series de tiempo con Python
+* [Análisis estadístico con Excel](https://courses.edx.org/courses/course-v1:GalileoX+C_Estadistica01+2T2019/courseware/22af0b49661d4a4b9c38284323bd8acf/f5f9adcc7f2940eabde20f6d7c4b7704/) courses.edx.org
 
-    Raul E. Lopez Briega. Introducción a Finanzas
+* [Probabilidad y Estadística con Python](https://relopezbriega.github.io/blog/2015/06/27/probabilidad-y-estadistica-con-python/)
 
-    Raul E. Lopez Briega. Probabilidad y Estadística con Python
+* [Ditribución de probabilidad con Python](https://relopezbriega.github.io/blog/2016/06/29/distribuciones-de-probabilidad-con-python/) Raul E. Lopez Briega
 
-    Raul E. Lopez Briega. Machine Learning con Python
+* [Statistical functions (scipy.stats)](https://docs.scipy.org/doc/scipy/reference/stats.html)
 
-    Raul E. Lopez Briega, Series de tiempo con Python
+**Análisis de datos con Python**
 
-    Raul E. Lopez Briega. El número de las finanzas
+http
 
 Dados mis conocimientos básicos de Python, soy consciente y agradezco las muchas posibilidades de mejora de los scripts y contenido de este repositorio, que nos vais a sugerir.
