@@ -23,7 +23,15 @@ La estrategia está orientada a las personas jubiladas que reunan las siguientes
 
 * **Invertir en fondos indexados**. Un inversor sin conocimientos, invirtiendo en un fondo indexado puede conseguir mejores rendimientos que la mayoría de los inversores profesionales.
 
-3.- **CRITERIOS** Para el desarrollo de la estrategia, tendremos en cuenta los siguientes criterios.
+El algoritmo deberá considerar lo siguiente:
+
+    Con el tiempo, con independencia del rendimiento pasado, las cotizaciones del fondo revertirán indefectiblemente a las medias del mercado, reducidas por los costes del fond Criterios que se deben cumplir:
+
+    los cruces al alza entre las cotizaciones y las medias cortas son indicadores de compra. A la inversa son indicadoes de ventas.
+
+    Deberá **estar asociado a algún ratio**. *Beta, tracking error, Alpha de Jensen, Ratio de Sharpe, Ratio de Sortino, Índice de Treynor, Ratio de Información. R Cuadrado, Máxima caída de un fondo, volatilidad,
+
+3.- **CRITERIOS** Para el desarrollo de la estrategia que denominamos Paso Peregrino, tendremos en cuenta los siguientes criterios.
 
 * **Ser disciplinados** . Las decisiones se basarán en la información y el análisis del histórico de cotizaciones.
 
@@ -37,7 +45,6 @@ La estrategia está orientada a las personas jubiladas que reunan las siguientes
 
 * **Objetivo mínimo superar la inflacción más **X** puntos**, en cada inversión.
     
-*  **Y**  al valor total invertido** 
 * **Fijar el % de caída (pérdida máxima dispuestos a asumir)**.
 
 * Establecer una alarma cuando el valor actual sea inferior en un Z% al valor invertido. (dejar un margen para salir a tiempo si la bolsa entra en caida pronunciada). 
