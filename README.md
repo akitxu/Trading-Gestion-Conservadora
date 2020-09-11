@@ -21,7 +21,7 @@ Apoyándonos en los recursos existentes en Internet, hemos desarrollado los sigu
 
 * **Entender los mercados.doc:** Conceptos que permiten entender qué son y cómo se comportan los mercados.
 
-* **Estrategia Paso Peregrino.doc**: Descripción y justificaciónde de los criterios de decisión que se van implementando en el algoritmo.
+* **Criterios Estrategia Paso Peregrino.doc**: Descripción y justificaciónde de los criterios de decisión que se van implementando en el algoritmo.
 
 Todos están en un desarrollo contínuo y deseamos que este proyecto llegue a ser un proyecto colectivo que se enriquezca y progrese con las aportaciones de más personas. Estan desarrollados con mis conocimientos intermedios de Python, y están en fase de depuración de errores  y abiertos a todo tipo correcciones y sugerencias. 
 
