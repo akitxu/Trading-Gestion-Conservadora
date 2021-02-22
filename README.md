@@ -31,5 +31,23 @@ Todos están en un desarrollo contínuo y deseamos que este proyecto llegue a se
 Se advierte que el rendimiento pasado no es un indicador confiable de resultados futuros.]
 
 
+AVISO LEGAL
 
+Al ingresar en esta página, el usuario acepta las condiciones y los términos que se expresan a continuación:
+
+* Este proyecto tiene una finalidad exclusivamente didáctica, de divulgación de materiales didácticos relacionados con Python y la gestión de activos financieros, y no  tiene fines comerciales ni ánimo de lucro.
+
+* No está permitida la reproducción de los contenidos (de cualquier tipo) publicados en dicha página en otras páginas Web, salvo mención expresa de su origen, y contando con el consentimiento expreso del autor. Sí está permitida la utilización de los materiales didácticos contenidos en esta página para uso particular o en el ámbito académico, siempre y cuando se indique en este último caso expresamente su origen.
+
+* En esta página web pueden existir contenidos de terceros. En cualquiera de los casos, y como es intención siempre el respetar los derechos de autor, el trabajo ajeno y las leyes del copyright, si hubiera cualquier mínimo problema respecto a cualquier material publicado en esta web, se ruega que se pongan en contacto a través del email akitxu@gmail.com, y el contenido será retirado (tras ser comprobado) con la máxima celeridad posible.
+
+* El autor de esta web no se hace responsable del mal uso que se haga del contenido expuesto en ella. 
+
+* El autor se compromete a mantener el secreto de la comunicación por vía e-mail, y a no utilizar los datos proporcionados con fines distintos a los expresamente aceptados por el usuario.
+
+* El autor no garantiza la precisión y actualidad de los contenidos de esta web.
+
+* Esta web pone a disposición de los usuarios enlaces que permiten a los usuarios acceder a otros web de terceros; el usuario deberá extremar la prudencia en la utilización de la información obtenida en estos web enlazados, ya que el autor de esta página web no está obligado a realizar ningún seguimiento de los enlaces incluidos.
+
+* Quedan reservados todos los derechos sobre este sitio proyecto y sus contenidos.
 
