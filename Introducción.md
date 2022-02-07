@@ -1,4 +1,4 @@
- Este proyecto se inición en el 2012, año en el que alcancé la edad de jubilación.
+Este proyecto se inición en el 2012, año en el que alcancé la edad de jubilación.
 
 Iniciada esta nueva fase de mi vida, me plantee intentar ocuparla con alguna actividad con largo recorrido que, planteandome nuevos retos y objetivos día a día, me mantuviera activo de forma creativa. La idea inicial ha sido aprender un lenguaje de programación orientado al análisis de datos, practicando con bases de datos de activos financieros de bolsas, teniendo como objetivo, desarrollar herramientas financieras propias para el análisis de carteras, y entender pra poder utilizar, los scripts disponibles en diversas Web’s de Internet, todo ello orientado a preservar mi cartera en la peor circunstancia que  se presente, 
 
@@ -18,7 +18,7 @@ En Anaconda, las diferentes versiones de los paquetes se administran mediante el
 
 En este proceso de pasos adelante y pasos atrás, he ido acumulando experiencia y conocimientos y considero que ha llegado el momento de compartirlos para animar y ayudar a otros a trazar un camino hacia estos conocimientos y que puedan utilizar/evolucionar, las herramientas de análisis que vamos desarrollando en este proyecto.
 
-Como dice el fisico** Michio Kaku**, físico, **si no compartes el conocimiento, no sirve para nada**.
+Como dice el fisico **Michio Kaku**, **si no compartes el conocimiento, no sirve para nada**.
 
 **Web's consultadas**:
 
