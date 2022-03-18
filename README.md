@@ -6,22 +6,27 @@ El **objeto** de este proyecto es **la búsqueda de estrategias de gestión de c
 
 Apoyándonos en los recursos existentes en Internet, hemos desarrollado los siguientes Notebooks.
 
-* **Importar_Cotizaciones-1.1:** Notebook en el que incluimos diversas posibilidades de importación de cotizaciones de valores, descargadas de diversas Web's en Internet. 
-
-
-* **Pandas_Dataframes_1.1.ipynb:** Notebook en el que hemos resumido las operaciones más frecuentemente utilizadas para el manejo de datos, en este caso financieros con Dataframes.
+* **Entender los mercados.doc:** Conceptos que permiten entender qué son y cómo se comportan los mercados.
 
 * **Py_Estadistica_Descriptiva_1.1.ipynb:** Repaso a la estadística descritiva, utilizando Python.
 
-
 * **Py_Estadistica_Inferencial_1.1.ipynb:** Repaso a la estadística inferencial utilizando Python.
-* **Py_Paso_Peregrino_valor_3.0.ipynb:** Analizar un valor y un indice / indicador de referencia.
 
-* **Py_Paso_Peregrino_cartera_3.0.ipynb:** Seleccionar y analizar una cartera de valores.
+* **Pandas practico.ipynb:** Notebook en el que hemos resumido las operaciones más frecuentemente utilizadas para el manejo de datos, en este caso financieros con Dataframes.
+* 
+* **Quotes import.ipynb:** Notebook en el que incluimos diversas posibilidades de importación de cotizaciones de valores, descargadas de diversas Web's en Internet. 
 
-* **Entender los mercados.doc:** Conceptos que permiten entender qué son y cómo se comportan los mercados.
+* **Ratios fondos.ipynb:** Ratios más frecuentemente utilizados para la valoración de Fondos de Inversión.
+
+* **Ratios stocks.ipynb:** Ratios utilizados para entender laevolución de las cotizaciones históricas de valores financieros de Fondos de Inversión.
+
+* **Strategizing tools.ipynb:** Teoría básica y modelos de script necesaios para el estudio de la evlución del histórico de cotizaciones de un valor y el desarrollo de estrategias. 
+ 
+* **Estrategias codigo util.ipynb.ipynb:** Estrategias de momento y de fuerza.
 
 * **Criterios Estrategia Paso Peregrino.doc**: Descripción y justificaciónde de los criterios de decisión que se van implementando en el algoritmo.
+
+* **Py_Paso_Peregrino_cartera_3.0.ipynb:** Seleccionar y analizar una cartera de valores.
 
 Todos están en un desarrollo contínuo y deseamos que este proyecto llegue a ser un proyecto colectivo que se enriquezca y progrese con las aportaciones de más personas. Estan desarrollados con mis conocimientos intermedios de Python, y están en fase de depuración de errores  y abiertos a todo tipo correcciones y sugerencias. 
 
