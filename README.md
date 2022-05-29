@@ -2,7 +2,7 @@
 
 Los ordenadores, la Inteligencia Artificial, el Machine Learning con sus algoritmos, la geopolítica, etc., han hecho tan complicado el sistema financiero, que muy pocas personas son capaces de entenderlo hoy día. A la velocidad con la que está evolucionando la inteligencia artificial, dentro de muy poco tiempo alcanzaremos un punto en el que ninguna persona será capaz de entender el funcionamiento del mercado de valores.
 
-El **objeto** de este proyecto es **la búsqueda de estrategias de gestión de carteras  que nos permitan preservarla en la peor circunstancia que  se presente**. ¿Qué necesitamos para poder gestionar nuestra cartera, en la dirección de este objetivo?. Necesitamos **herramientas de análisis** y **criterios de decisión** para seleccionar el tipo de activos que van a conformar nuestra cartera y tomar decisiones que faciliten, basados en la evolución de las cotizaciones de estos activos, alcanzar el objetivo.
+El **objeto** de este proyecto es **la búsqueda de estrategias de gestión de carteras  que nos permitan preservarla en la peor circunstancia que  se presente**. ¿Qué necesitamos para gestionar nuestra cartera?. Necesitamos un objetivo, herramientas de análisis, y desarrollar y probar estrategias de basadas en el comportamiento histórico de los activos. Esto posibilitará la toma de decisiones orientadas  a conseguir el objetivo .
 
 Apoyándonos en los recursos existentes en Internet, hemos desarrollado los siguientes Notebooks.
 
