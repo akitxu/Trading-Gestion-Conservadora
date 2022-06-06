@@ -11,8 +11,7 @@ Esta primera fase me permitió aprender los fundamentos básicos del lenguaje, c
 En este punto descubro y empiezo a introducirme en el mundo de **Anaconda** , distribución libre y abierta de los lenguajes Python y R  utilizada en ciencia de datos, y en el aprendizaje automático (**Machine Learning**).
 
 En Anaconda, las diferentes versiones de los paquetes se administran mediante el sistema de gestión de paquetes **conda**, el cual lo hace bastante sencillo de instalar, correr, y actualizar software de ciencia de datos y aprendizaje automático como son **Scikit-team**,**TensorFlow** y **SciPy**.
-
-** NumPy**, que es una extensión de Python, que le agrega mayor soporte para vectores y matrices. **Matplotlib**, biblioteca para la generación de gráficos a partir de datos contenidos en listas o arrays en el lenguaje de programación Python y su extensión matemática NumPy.
+**NumPy**, que es una extensión de Python, que le agrega mayor soporte para vectores y matrices. **Matplotlib**, biblioteca para la generación de gráficos a partir de datos contenidos en listas o arrays en el lenguaje de programación Python y su extensión matemática NumPy.
 
 **Jupyter Notebook**, me descubrió la herramienta ideal para implementar esta actividad didáctica, y finalmente **GitHub**, el espacio para compartir y mejorar el proyecto.
 
