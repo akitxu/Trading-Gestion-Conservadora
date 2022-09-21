@@ -3,83 +3,85 @@
 
 La estrategia está orientada a las personas jubiladas que reunan las siguientes condiciones:
 
-* Disponer de un patrimonio que preservar.
+- Disponer de un patrimonio que preservar.
 
-* Esta población dispone de menos tiempo para recuperar pérdidas grandes.
+- Esta población dispone de menos tiempo para recuperar pérdidas grandes.
 
-* Tienen mayor necesidad de percibir rentas de inversión.
+- Tienen mayor necesidad de percibir rentas de inversión.
 
-* Tienen un miedo mayor a las fluctuaciones del mercado.
+- Tienen un miedo mayor a las fluctuaciones del mercado.
 
 2.- Estrategias generalesde inversión. 
 
-* **Inversión a largo plazo**. Se basa en encontrar un equilibrio adecuado entre fondos de inversión y acciones, teniendo en cuenta que con menores costes las posibilidades de obtener mayor beneficio son mayores, y mantenerla durante etapas cambiantes del mercado.
+- **Inversión a largo plazo**. Se basa en encontrar un equilibrio adecuado entre fondos de inversión y acciones, teniendo en cuenta que con menores
+costes las posibilidades de obtener mayor beneficio son mayores, y mantenerla durante etapas cambiantes del mercado.
 
-* **MarketTiming**. Estrategia que consiste en comprar y vender en las caidas del mercado, volviendo a reinvertir para coger las subidas.
-Esta estrategia funciona bien durante las caidas pero nos deja fuera del mercado cuando el mercado repunta.
+- **MarketTiming**. Estrategia que consiste en comprar y vender en las caidas del mercado, volviendo a reinvertir para coger las subidas. Funciona bien 
+durante las caidas pero nos deja fuera del mercado cuando  éste repunta.
 
-* **Rotación rápida**. Consiste en comprar acciones o fondos muy atractivos y vigilar su crecimiento para vender cuando alcancen un pico considerable.\
+- **Rotación rápida**. Consiste en comprar acciones o fondos muy atractivos y vigilar su crecimiento para vender cuando alcancen un pico considerable.
 No hay indicios de que esta estrategia mejore las rentabilidades.
 
-* **Corto plazo**. A corto plazo el mercado es imprevisible.
+- **Corto plazo**. A corto plazo el mercado es imprevisible.
 
-* **Invertir en fondos indexados**. Un inversor sin conocimientos, invirtiendo en un fondo indexado puede conseguir mejores rendimientos que la mayoría\
+- **Invertir en fondos indexados**. Un inversor sin conocimientos, invirtiendo en un fondo indexado puede conseguir mejores rendimientos que la mayoría
 de los inversores profesionales.
 
-El algoritmo deberá considerar lo siguiente:
+El algoritmo deberá tener en cuenta lo siguiente:
 
-* Con el tiempo, con independencia del rendimiento pasado, las cotizaciones del fondo revertirán indefectiblemente a las medias del mercado,\
-    reducidas por los costes del fondo. Criterios que se deben cumplir:
+- Con el tiempo, con independencia del rendimiento pasado, las cotizaciones del fondo revertirán indefectiblemente a las medias del mercado,
+    reducidas por los costes del fondo.
 
-* Los cruces al alza entre las cotizaciones y las medias cortas son indicadores de compra. A la inversa son indicadoes de ventas.
+- Los cruces al alza entre las cotizaciones y las medias cortas son indicadores de compra. A la inversa son indicadoes de ventas.
 
-* Deberá **estar asociado a algún ratio**. *Beta, tracking error, Alpha de Jensen, Ratio de Sharpe, Ratio de Sortino, Índice de Treynor,\
+- Deberá **estar asociado a algún ratio**. *Beta, tracking error, Alpha de Jensen, Ratio de Sharpe, Ratio de Sortino, Índice de Treynor,
 Ratio de Información. R Cuadrado, Máxima caída de un fondo, volatilidad,
 
 3.- **CRITERIOS** Para el desarrollo de la estrategia que denominamos Paso Peregrino, tendremos en cuenta los siguientes criterios.
 
-* **Ser disciplinados** . Las decisiones se basarán en la información y el análisis del histórico de cotizaciones.
+- **Ser disciplinados** . Las decisiones se basarán en la información y el análisis del histórico de cotizaciones.
 
-* **Invertir como máximo un % del total de capital ahorrado**. Disponer de dinero para entrar en oportunidades. Fijaremos el porcentaje  buscando\
+- **Invertir como máximo un % del total de capital ahorrado**. Disponer de dinero para entrar en oportunidades. Fijaremos el porcentaje  buscando\
 aquél con el que más cómodo nos encontremos.
 
-* **Reducir al mínimo los costes de la inversión**. La rentabilidad neta es la bruta menos los costes.
+- **Reducir al mínimo los costes de la inversión**. La rentabilidad neta es la bruta menos los costes.
 
-* **Definir a priori lo que consideramos beneficio**. Consideraremos beneficio todo lo que supere el valor invertido descontado el 18% que supondría\
+- **Definir a priori lo que consideramos beneficio**. Consideraremos beneficio todo lo que supere el valor invertido descontado el 18% que supondría
 el IRPF en el caso de venta.
     
-* **Tener en cuenta los costes** de todo tipo generados por las inversiones.
+- **Tener en cuenta los costes** de todo tipo generados por las inversiones.
 
-* **Objetivo mínimo superar la inflacción más **X** puntos**, en cada inversión.
+- **Objetivo mínimo superar la inflacción más **X** puntos**, en cada inversión.
     
-* **Fijar el % de caída (pérdida máxima dispuestos a asumir)**.
+- **Fijar el % de caída (pérdida máxima dispuestos a asumir)**.
 
-* Establecer una alarma cuando el valor actual sea inferior en un Z% al valor invertido. (dejar un margen para salir a tiempo si la bolsa entra\
+- Establecer una alarma cuando el valor actual sea inferior en un Z% al valor invertido. (dejar un margen para salir a tiempo si la bolsa entra
 en caida pronunciada). 
     
-* **Activará una alarma alarma cuando el valor de la cartera se encuentre **$X_{max}$** puntos por encima del precio de adquisición.\
-**$\quad X_{max}$** es el máximo beneficio (descontado 18%IRPF) que vamos a permitir sin reorganizar el valor/cartera. 
+- **Activará una alarma alarma cuando el valor de la cartera se encuentre **$X_{max}$** puntos por encima del precio de adquisición.
+**$\quad X_{max}$** es el máximo beneficio (descontado 18%IRPF) que vamos a permitir sin reorganizar el valor / cartera. 
 
-* Alcanzado este punto, revertiremos para recoger beneficios y volver a equilibrar la cartera, manteniendo el % de inversión con relación al total\
+- Alcanzado este punto, revertiremos para recoger beneficios y volver a equilibrar la cartera, manteniendo el % de inversión con relación al total
 ahorrado hasta ese momento.
     
-* Buscar formas de ponderar de alguna manera las variables geopoliticas y geoeconomicas. Hay libros que hablan de esto, con la mente pensando en las\
+- Buscar formas de ponderar de alguna manera las variables geopoliticas y geoeconomicas. Hay libros que hablan de esto, con la mente pensando en las
 estrategias geopoliticas y geoeconómicas, como se identifican y como influyen en las bolsas.
     
-* Identificar puntos históricos de interes, como el 2008 (crisis de deuda), el 2020 (coronavirus),  para analizar comportamientos en dichos periodos.
+- Identificar puntos históricos de interes, como el 2008 (crisis de deuda), el 2020 (coronavirus),  el 2022,guerra en Ucrania, etc. para analizar 
+comportamientos en dichos periodos.
     
-* Equilibrar el modelo como mínimo cada 5 años, para identificar las inversiones que porporcionan ingresos y con las que nos sentimos más cómodos.\
+* Equilibrar el modelo como mínimo cada 5 años, para identificar las inversiones que porporcionan ingresos y con las que nos sentimos más cómodos.
 Hay que buscar la relación perfecta entre rendimiento y seguridad. (riesgo / volatilidad)
     
 * Antes de invertir en un fondo en particular exigirle un buen historial durante al menos cinco años antes de invertir.
 
-* Simular o probar la estrategia. Esa simulación tiene que estar respaldada por una historia muy convincente que describa esa estrategia.\
+* Simular o probar la estrategia. Esa simulación tiene que estar respaldada por una historia muy convincente que describa esa estrategia.
 En otras palabras, debe tener una razón por la cual este método funciona y debe tener sentido
     
 * Estudiar cómo la estrategia encaja dentro de nuestra cartera y cómo se relaciona con otras inversiones existentes en la misma.
 
 * No podemos controlar la rentabilidad futura, pero sí podemos controlar los **riesgos**, los **costes** y el **tiempo**.
 
-* No complicar la estrategia con demasiados valores en la cartera. Buscar una asignación razonable de activos en renta variable, \
-renta fija y reservas en efectivo. Seleccionar fondos de inversión (FI) con valores de alta calificación crediticia; y un cuidadoso equilibrio\
+* No complicar la estrategia con demasiados valores en la cartera. Buscar una asignación razonable de activos en renta variable, 
+renta fija y reservas en efectivo. Seleccionar fondos de inversión (FI) con valores de alta calificación crediticia; y un cuidadoso equilibrio
 entre riesgo, rentabilidad y costes. 
