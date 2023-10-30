@@ -26,6 +26,6 @@ Para alcanzar nuestros objetivos, hemos utilizado recursos disponibles en Intern
 
 # Agradecimientos
 
-Este proyecto está en constante desarrollo y deseamos que se convierta en un proyecto colectivo que se enriquezca y progrese con las aportaciones de más personas. Los Notebooks han sido desarrollados con conocimientos intermedios de Python y se encuentran en fase de depuración de errores. Por lo tanto, están abiertos a cualquier tipo de corrección o sugerencia que pueda mejorarlos.
+Este proyecto está en constante desarrollo y deseamos que se convierta en un proyecto colectivo que se enriquezca y progrese con las aportaciones de más personas. Los Notebooks han sido desarrollados con conocimientos intermedios de Python y el apoyo de la IA. Por lo tanto, están abiertos a cualquier tipo de corrección o sugerencia que pueda mejorarlos.
 
 
