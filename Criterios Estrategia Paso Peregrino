@@ -1,76 +1,27 @@
-# Estrategia Paso Peregrino - Criterios para construir el algoritmo
+La estrategia Paso Peregrino es una estrategia de inversión conservadora que está diseñada para preservar el capital y superar la inflación. Los criterios para construir el algoritmo de esta estrategia son los siguientes:
 
-El objetivo de la estrategia Paso Peregrino es preservar el capital en la situación más desfavorable del mercado de valores y superar la inflación en al menos X puntos. Esta estrategia está dirigida a personas jubiladas que cumplen con las siguientes condiciones:
+**Criterios generales:**
 
-- Disponen de un patrimonio que desean preservar.
-- Tienen una menor capacidad para recuperar pérdidas importantes debido a su edad y situación de jubilación.
-- Necesitan obtener rentas de inversión para asegurar su calidad de vida.
-- Tienen una mayor aversión al riesgo y miedo a las fluctuaciones del mercado.
+1- **Ser disciplinados:** nuestras decisiones se basarán en información y análisis históricos de cotizaciones.  
+2- **Invertir como máximo un % del capital ahorrado:** dispondremos de dinero para aprovechar oportunidades, pero estableceremos un porcentaje que nos haga sentir cómodos.  
+3- **Reducir al mínimo los costes de inversión:** la rentabilidad neta es la bruta menos los costes.  
+4- **Definir a priori lo que consideramos beneficio:** consideraremos beneficio todo lo que supere el valor invertido, descontando el 18% que supondría el IRPF en caso de venta.  
+5- **Tener en cuenta los costes de todo tipo generados por las inversiones.**
+        Tener como objetivo mínimo superar la inflación más X puntos en cada inversión.
 
-Teniendo en cuenta estos criterios, se construirá un algoritmo que permita tomar decisiones de inversión de manera objetiva y estratégica, con el fin de cumplir con el objetivo de preservación del capital y superar la inflación.
+**Criterios específicos:**
 
-Aquí te presento una versión mejorada del texto:
+1-**Fijar el % de caída máxima que estamos dispuestos a asumir:** por ejemplo, un 10%.
+2- **Establecer una alarma cuando el valor actual sea inferior en un `Z%` al valor invertido:** por ejemplo, un 15%.
+3- **Activar una alarma cuando el valor de la cartera se encuentre `Xmax` puntos por encima del precio de adquisición:** por ejemplo, un 20%.
+* Buscar formas de ponderar de alguna manera las variables geopolíticas y geo-económicas para identificar y analizar su influencia en las bolsas.
+* Identificar puntos históricos de interés, como la crisis de deuda en 2008, la pandemia en 2020 o la guerra en Ucrania en 2022, para analizar comportamientos en dichos periodos.
+* Equilibrar el modelo al menos cada 5 años para identificar las inversiones que proporcionan ingresos y con las que nos sentimos cómodos.
+* Antes de invertir en un fondo en particular, exigirle un buen historial durante al menos cinco años.
+* Simular o probar la estrategia respaldada por una historia convincente que describa por qué este método funciona y tenga sentido.
+* Estudiar cómo la estrategia encaja dentro de la cartera, teniendo en cuenta otros tipos de inversiones.
+* No complicar la estrategia con demasiados valores en la cartera.
 
-2.- Estrategias generales de inversión
+**Conclusión:**
 
-Existen diversas estrategias de inversión, cada una con sus propias características y riesgos. A continuación, se describen algunas de las estrategias más comunes:
-
-- **Inversión a largo plazo**. Esta estrategia se basa en encontrar un equilibrio adecuado entre fondos de inversión y acciones, teniendo en cuenta que con menores costes las posibilidades de obtener mayor beneficio son mayores, y mantenerla durante etapas cambiantes del mercado. Esta estrategia es adecuada para los inversores que buscan un enfoque de "comprar y mantener" a largo plazo, con el objetivo de obtener un rendimiento estable y sostenido a lo largo del tiempo.
-
-- **Market Timing**. Esta estrategia consiste en comprar y vender en las caídas del mercado, volviendo a reinvertir para aprovechar las subidas. Funciona bien durante las caídas pero nos deja fuera del mercado cuando éste repunta. Es una estrategia más arriesgada que la inversión a largo plazo y requiere una buena capacidad para predecir el comportamiento del mercado.
-
-- **Rotación rápida**. Esta estrategia consiste en comprar acciones o fondos muy atractivos y vigilar su crecimiento para vender cuando alcancen un pico considerable. No hay indicios de que esta estrategia mejore las rentabilidades y, además, puede generar altos costos de transacción.
-
-- **Corto plazo**. A corto plazo, el mercado es imprevisible y puede haber grandes fluctuaciones. Esta estrategia implica un alto riesgo y es adecuada solo para inversores experimentados y que pueden permitirse asumir pérdidas significativas.
-
-- **Inversión en fondos indexados**. Un inversor sin conocimientos puede obtener mejores rendimientos que la mayoría de los inversores profesionales al invertir en un fondo indexado. Esta estrategia es adecuada para los inversores que desean una cartera diversificada y una exposición a todo el mercado.
-
-El algoritmo para construir una estrategia de inversión deberá tener en cuenta lo siguiente:
-
-- Con el tiempo, con independencia del rendimiento pasado, las cotizaciones del fondo revertirán indefectiblemente a las medias del mercado, reducidas por los costes del fondo.
-
-- Los cruces al alza entre las cotizaciones y las medias cortas son indicadores de compra. A la inversa, son indicadores de ventas.
-
-- Deberá estar asociado a algún ratio para evaluar la rentabilidad y riesgo de la inversión, como por ejemplo el Beta, tracking error, Alpha de Jensen, Ratio de Sharpe, Ratio de Sortino, Índice de Treynor, Ratio de Información, R Cuadrado, Máxima caída de un fondo, volatilidad, entre otros. Es importante seleccionar el ratio adecuado para el tipo de inversión que se está evaluando.
-
-Aquí tienes una posible revisión del texto:
-
-3. CRITERIOS PARA LA ESTRATEGIA "PASO PEREGRINO"
-
-Para desarrollar la estrategia que hemos denominado "Paso Peregrino", tomaremos en cuenta los siguientes criterios:
-
-- Ser disciplinados: nuestras decisiones se basarán en información y análisis históricos de cotizaciones.
-
-- Invertir como máximo un % del capital ahorrado: dispondremos de dinero para aprovechar oportunidades, pero estableceremos un porcentaje que nos haga sentir cómodos.
-
-- Reducir al mínimo los costes de inversión: la rentabilidad neta es la bruta menos los costes.
-
-- Definir a priori lo que consideramos beneficio: consideraremos beneficio todo lo que supere el valor invertido, descontando el 18% que supondría el IRPF en caso de venta.
-
-- Tener en cuenta los costes de todo tipo generados por las inversiones.
-
-- Tener como objetivo mínimo superar la inflación más X puntos en cada inversión.
-
-- Fijar el % de caída máxima que estamos dispuestos a asumir.
-
-- Establecer una alarma cuando el valor actual sea inferior en un Z% al valor invertido, para salir a tiempo si la bolsa entra en caída pronunciada.
-
-- Activar una alarma cuando el valor de la cartera se encuentre $X_{max}$ puntos por encima del precio de adquisición. $X_{max}$ es el máximo beneficio (descontado el 18% del IRPF) que permitiremos sin reorganizar la cartera.
-
-- Alcanzado este punto, revertiremos para recoger beneficios y volver a equilibrar la cartera, manteniendo el % de inversión en relación al total ahorrado hasta ese momento.
-
-- Buscar formas de ponderar de alguna manera las variables geopolíticas y geo-económicas para identificar y analizar su influencia en las bolsas.
-
-- Identificar puntos históricos de interés, como la crisis de deuda en 2008, la pandemia en 2020 o la guerra en Ucrania en 2022, para analizar comportamientos en dichos periodos.
-
-- Equilibrar el modelo al menos cada 5 años para identificar las inversiones que proporcionan ingresos y con las que nos sentimos cómodos. Buscar la relación perfecta entre rendimiento y seguridad (riesgo/volatilidad).
-
-- Antes de invertir en un fondo en particular, exigirle un buen historial durante al menos cinco años.
-
-- Simular o probar la estrategia respaldada por una historia convincente que describa por qué este método funciona y tenga sentido.
-
-- Estudiar cómo la estrategia encaja dentro de nuestra cartera y cómo se relaciona con otras inversiones existentes en la misma.
-
-- No podemos controlar la rentabilidad futura, pero sí podemos controlar los riesgos, los costes y el tiempo.
-
-- No complicar la estrategia con demasiados valores en la cartera. Buscar una asignación razonable de activos en renta variable, renta fija y reservas en efectivo. Seleccionar fondos de inversión (FI) con valores de alta calificación crediticia; y un cuidadoso equilibrio entre riesgo, rentabilidad y costes.
+La estrategia Paso Peregrino es una estrategia de inversión conservadora que se basa en la disciplina, la diversificación y la reducción de costes. Está diseñada para preservar el capital de las personas principalmente jubiladas que desean superar la inflación sin invertir a  larg plazo.
