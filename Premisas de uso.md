@@ -1,17 +1,30 @@
-<u>**Agradecimiento y Comunicación de Errores**</u>
+**<u>Consejo:</u>
 
-Este código se distribuye bajo las siguientes premisas:
+Este código es una herramienta que puede ayudarte a aprender sobre trading financiero y estrategias de inversión. Sin embargo, es importante tener en cuenta que el trading es una actividad de alto riesgo y que siempre existe la posibilidad de perder dinero. Antes de empezar a operar, es importante que entiendas los riesgos involucrados y que realices tu propia investigación.
 
-1- **No garantía de ganancias:** Las estrategias de trading no garantizan ganancias. Los mercados financieros son volátiles, y siempre existe el riesgo de pérdidas.
+**<u>Advertencia:</u>**
+
+Este código no es una garantía de éxito en el trading. El trading es una actividad compleja y no existe una estrategia que garantice siempre el éxito. Es importante que utilices este código con precaución y que siempre estés dispuesto a perder dinero.
+
+**<u>Recomendación:</u>**
+
+Si estás interesado en aprender más sobre trading financiero, te recomiendo que consultes los siguientes recursos:
+
+    Libros:
+        "El inversor inteligente" de Benjamin Graham
+        "Trading de futuros" de John Murphy
+        "El arte de la especulación" de Jesse Livermore
+        "Cómo invertir en Fondos de Inversión" de Jhon C. Bogle
+    Sitios web:
+        Investopedia
+        TradingView
+        Financial Times
+
 
 2- **Asesoramiento financiero:** Este código es solo educativo e informativo, no es asesoramiento financiero. Los usuarios deben realizar sus propias investigaciones y tomar decisiones financieras basadas en su propia situación.
 
 3- **Responsabilidad:** Cada usuario asume su propio riesgo y, en consecuencia, es el único responsable de las decisiones de trading que tome basadas en este código.
 
-4- **Cumplimiento normativo:** Este código no tiene la consideración de asesoramiento financiero.
-
-4- **Actualizaciones y mantenimiento:** Con el feed-back que reciba y en la medida en la que mis conocimientos aumenten, es mi intención mantener actualizado este código.
-
 5- **Condiciones de uso:** El código se puede utilizar bajo la licencia [Licencia GPL (GNU General Public License)](https://www.gnu.org/licenses/gpl-3.0.html)
 
-Si tiene alguna pregunta o comentario, no dude en ponerse en contacto conmigo.
+Espero que este código sea de utilidad para ti.
