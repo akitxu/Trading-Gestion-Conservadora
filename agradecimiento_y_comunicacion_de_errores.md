@@ -1,18 +1,13 @@
-"Agradecimiento y Comunicación de Errores"
+**<u>Agradecimiento por la comunicación de errores</u>**
 
-¡Gracias por utilizar nuestro código de estrategias de trading! Estamos encantados de que hayas decidido probar nuestras herramientas y recursos para mejorar tus resultados de trading.
+Este código es una herramienta en desarrollo y es posible que contenga errores. Si encuentras algún error, por favor, infórmalo en el repositorio de GitHub. Agradezco cualquier comentario o sugerencia que puedas hacer para mejorar el código.
 
-Sin embargo, la perfección es un objetivo difícil de alcanzar, y los errores pueden ocurrir en cualquier momento. Si identificas algún error, fallo o problema en nuestro código o estrategias, te agradecemos de antemano que nos lo comuniques. Tu feedback es vital para mejorar nuestras estrategias y crear un entorno más seguro y eficiente para todos los traders.
+**<u>Cómo comunicar un error</u>**
 
-Por favor, envíanos un correo electrónico a [correo electrónico] o rellena nuestro formulario de contacto para informarnos sobre cualquier error que hayas encontrado. Nos esforzamos por solucionar los problemas de manera rápida y efectiva.
+Para comunicar un error, abre un nuevo issue en el repositorio de GitHub. En el issue, describe el error que has encontrado y proporciona el máximo detalle posible. Si es posible, adjunta un ejemplo de código que reproduzca el error.
 
-Tus comentarios nos ayudan a mejorar constantemente nuestras estrategias y a crear un entorno más seguro y eficiente para todos los traders.
+**<U>Cómo contribuir al código</u>**
 
-Gracias por ayudarnos a mejorar nuestras estrategias.
+Si quieres contribuir al código, puedes hacerlo abriendo un nuevo pull request en el repositorio de GitHub. En el pull request, incluye tus cambios y explica por qué los realizas.
 
-¡Juntos, hagamos que los mercados financieros sean más eficientes y seguros!
-
-Atentamente,
-
-[Enrique Fueyo Vega]
-[akitxu@gmail.com]
+Gracias por tu colaboración.
