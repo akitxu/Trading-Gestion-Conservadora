@@ -1,4 +1,4 @@
-**<u>Consejo:</u>
+**<u>Consejo:</u>**
 
 Este código es una herramienta que puede ayudarte a aprender sobre trading financiero y estrategias de inversión. Sin embargo, es importante tener en cuenta que el trading es una actividad de alto riesgo y que siempre existe la posibilidad de perder dinero. Antes de empezar a operar, es importante que entiendas los riesgos involucrados y que realices tu propia investigación.
 
