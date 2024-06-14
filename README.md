@@ -10,7 +10,9 @@ La IA y el ML han mejorado significativamente la capacidad de los sistemas finan
 
 En este contexto de creciente complejidad, proponemos desarrollar un proyecto de "Gestión Conservadora de Activos Financieros". El objetivo principal es encontrar estrategias de gestión de carteras que permitan preservar nuestras inversiones incluso en las peores circunstancias del mercado. Para lograrlo, necesitamos establecer metas claras, utilizar herramientas de análisis eficaces y desarrollar y probar estrategias basadas en el comportamiento histórico de los activos. Esto nos permitirá tomar decisiones informadas y alcanzar nuestros objetivos de inversión a corto y largo plazo, manteniendo un enfoque conservador y prudente.
 
-A través de este proyecto, exploraremos diversas técnicas y enfoques, como el análisis técnico, la diversificación de riesgos y la implementación de estrategias de cobertura. Nuestro objetivo es crear un marco sólido y confiable que nos permita navegar con éxito en los desafiantes mercados financieros actuales y futuros.
+Además, queremos dotar a los inversores no profesionales, con pocos o ningún conocimiento de programación, de herramientas de análisis y gestión que sean accesibles y fáciles de usar. Estas herramientas permitirán a los inversores realizar análisis profundos, gestionar sus carteras de manera eficiente y tomar decisiones informadas sin necesidad de conocimientos técnicos avanzados. Esto incluirá interfaces intuitivas, guías paso a paso y recursos educativos para facilitar el aprendizaje y la aplicación de técnicas de gestión de inversiones.
+
+A través de este proyecto, exploraremos diversas técnicas y enfoques, como el análisis técnico, la diversificación de riesgos y la implementación de estrategias de cobertura. Nuestro objetivo es crear un marco sólido y confiable que nos permita navegar con éxito en los desafiantes mercados financieros actuales y futuros, al tiempo que empoderamos a los inversores no profesionales con las herramientas y conocimientos necesarios para gestionar sus inversiones de manera efectiva.
 
 # Agradecimientos
 
