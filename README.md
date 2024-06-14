@@ -2,11 +2,15 @@
 
 # Introducción
 
-La complejidad del sistema financiero actual ha aumentado drásticamente gracias a los avances tecnológicos en campos como la Inteligencia Artificial, el Machine Learning y la geopolítica. Esto ha hecho que muy pocas personas sean capaces de entenderlo por completo en la actualidad. Con la velocidad a la que evoluciona la inteligencia artificial, es posible que dentro de poco tiempo nadie sea capaz de comprender completamente cómo funciona el mercado de valores.
+La complejidad del sistema financiero actual ha aumentado considerablemente debido a los avances tecnológicos en Inteligencia Artificial (IA), Machine Learning (ML) y la influencia de factores geopolíticos. Esto ha hecho que muy pocas personas sean capaces de comprenderlo por completo en la actualidad.
+
+La IA y el ML han mejorado significativamente la capacidad de los sistemas financieros para procesar grandes volúmenes de datos y hacer predicciones precisas. Sin embargo, también han introducido mayor complejidad, ya que los modelos de aprendizaje automático pueden ser difíciles de entender y pueden producir resultados que no siempre son intuitivos. Además, los eventos geopolíticos añaden otra capa de complejidad, afectando significativamente los mercados financieros y haciendo que sean más difíciles de predecir.
 
 # Objetivos del proyecto
 
-El objetivo de este proyecto es encontrar estrategias de gestión de carteras que nos permitan preservar nuestras inversiones en las peores circunstancias. Para lograr esto, necesitamos establecer objetivos claros, herramientas de análisis eficaces y desarrollar y probar estrategias basadas en el comportamiento histórico de los activos. Esto nos permitirá tomar decisiones informadas y lograr nuestros objetivos de inversión.
+En este contexto de creciente complejidad, proponemos desarrollar un proyecto de "Gestión Conservadora de Activos Financieros". El objetivo principal es encontrar estrategias de gestión de carteras que permitan preservar nuestras inversiones incluso en las peores circunstancias del mercado. Para lograrlo, necesitamos establecer metas claras, utilizar herramientas de análisis eficaces y desarrollar y probar estrategias basadas en el comportamiento histórico de los activos. Esto nos permitirá tomar decisiones informadas y alcanzar nuestros objetivos de inversión a corto y largo plazo, manteniendo un enfoque conservador y prudente.
+
+A través de este proyecto, exploraremos diversas técnicas y enfoques, como el análisis técnico, la diversificación de riesgos y la implementación de estrategias de cobertura. Nuestro objetivo es crear un marco sólido y confiable que nos permita navegar con éxito en los desafiantes mercados financieros actuales y futuros.
 
 # Agradecimientos
 
