@@ -18,4 +18,9 @@ A través de este proyecto, exploraremos diversas técnicas y enfoques, como el 
 
 Este proyecto está en constante desarrollo y deseamos que se convierta en un proyecto colectivo que se enriquezca y progrese con las aportaciones de más personas. Los Notebooks han sido desarrollados con conocimientos intermedios de Python y el apoyo de la IA. Por lo tanto, están abiertos a cualquier tipo de corrección o sugerencia que pueda mejorarlos.
 
+# Disclaimer  
+Este proyecto es experimental y se ofrece únicamente con fines educativos y de investigación.
+No constituye asesoramiento financiero ni una recomendación de inversión.
+El autor no garantiza la exactitud, integridad o idoneidad del contenido y no asume ninguna responsabilidad por pérdidas derivadas de su uso.
+
 
