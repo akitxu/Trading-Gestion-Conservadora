@@ -1,33 +1,60 @@
 <Gestión Conservadora de Activos Fnancieros.>
-    Copyright (C) <year>  <Enrique Fueyo Vega mail: akitxu@gmail.com>
 
-LICENCIA — Creative Commons BY‑NC 4.0
+Licencia dual
 
-Este proyecto se distribuye bajo la licencia Creative Commons Atribución–No Comercial 4.0 Internacional (CC BY‑NC 4.0).
-✔️ Permisos
+Este proyecto se distribuye públicamente bajo la licencia
+Creative Commons Atribución – No Comercial – Sin Derivadas 4.0 Internacional (CC BY‑NC‑ND 4.0).
 
-Puedes:
+Además, para instituciones académicas, comités técnicos o entidades financieras que participen en procesos de validación, auditoría o revisión metodológica, se ofrece un permiso institucional adicional de uso no comercial, descrito a continuación.
+Licencia pública (CC BY‑NC‑ND 4.0)
 
-    Usar el contenido.
-    Copiarlo y compartirlo.
-    Adaptarlo, modificarlo o crear trabajos derivados.
+Permite:
 
-Siempre que:
+    Compartir el contenido
 
-    Cites la fuente original (autor y enlace al repositorio).
-    No utilices el contenido con fines comerciales.
+    Citarlo correctamente
 
-❌ No permitido
+Prohíbe:
 
-    Usar este proyecto, su código o sus datos en productos, servicios o actividades con fines comerciales.
-    Vender, revender o redistribuir el contenido con ánimo de lucro.
-    Integrarlo en software, informes o plataformas comerciales sin permiso explícito por escrito.
+    Uso comercial sin permiso
 
-ℹ️ Aviso
+    Modificaciones del contenido original
 
-Esta licencia no restringe el uso personal, educativo o de investigación sin ánimo de lucro.
-El autor no ofrece garantías y no se responsabiliza del uso que terceros hagan del contenido.
-📄 Texto legal completo
+    Distribución de versiones alteradas
 
-Puedes consultar la licencia completa en:
-https://creativecommons.org/licenses/by-nc/4.0/legalcode (creativecommons.org in Bing)
+Permiso institucional adicional (uso no comercial para validación)
+
+Las instituciones que participen en procesos de homologación, revisión académica, auditoría técnica o análisis metodológico reciben un permiso adicional para:
+
+    Ejecutar el código en sus sistemas internos.
+
+    Analizar, revisar y auditar la metodología, datos y resultados.
+
+    Integrar temporalmente el código en entornos de validación o investigación.
+
+    Generar informes internos basados en el indicador.
+
+Límites del permiso institucional:
+
+    No otorga ningún derecho comercial.
+
+    No permite redistribuir el código fuera del proceso de validación.
+
+    No permite integrarlo en productos, servicios o carteras reales sin autorización expresa del autor.
+
+    No modifica la titularidad ni los derechos del autor.
+
+Este permiso institucional es revocable, no exclusivo y limitado al proceso de validación.
+Restricciones adicionales
+
+No se pueden aplicar medidas tecnológicas o legales que limiten los permisos otorgados por esta licencia.
+No se permite el uso comercial sin autorización expresa del autor.
+Estado del proyecto
+
+Versión preliminar en desarrollo activo.
+El objetivo es avanzar hacia una versión académicamente validada y lista para adopción profesional.
+Disclaimer
+
+Este proyecto es experimental y se ofrece únicamente con fines educativos y de investigación.
+No constituye asesoramiento financiero ni una recomendación de inversión.
+El autor no garantiza la exactitud, integridad o idoneidad del contenido y no asume ninguna responsabilidad por pérdidas derivadas de su uso.
